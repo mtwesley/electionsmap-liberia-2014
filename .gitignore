@@ -1,0 +1,7 @@
+venv
+venvs
+.env
+.wsgi
+*.pyc
+.idea
+*.DS_Store
