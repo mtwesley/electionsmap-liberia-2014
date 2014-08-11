@@ -5,11 +5,16 @@ import settings
 application = sys.argv[1]
 
 if application == 'app':
-    from app import app
+    from app import app, db
 
 elif application == 'sms':
-    from sms import app
+    from sms import app, db
 
-# Configure and launch desired application
+# Configure settings
 app.config.from_object(settings)
+
+# Connect to database
+db.connect()
+
+# Initialize application
 app.run(port=app.config[application.upper() + '_PORT'])
