@@ -104,19 +104,23 @@ def sms():
             candidates_votes_matches = re.findall(candidates_votes_syntax, text)
             try:
                 pct = results_matches.group(1)
-                precinct = Precinct.get(Precinct.code == pct.upper())
+                precinct = (Precinct.get(Precinct.code == pct.upper())
+                            .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
+                            .where((ElectionReporter.election == election.id) & (ElectionReporter.reporter == reporter.id)))
             except Precinct.DoesNotExist:
                 precinct = None
-                return 'Precinct (%s) does not exist.' % pct.upper()
+                return 'Precinct (%s) unauthorized or non-existent.' % pct.upper()
 
             for (cnd, sh_cnd, vts) in candidates_votes_matches:
                 try:
-                    candidate = Candidate.get(Candidate.code == cnd.upper())
+                    candidate = (Candidate.get(Candidate.code == cnd.upper())
+                                 .join(ElectionCandidate, on=(Candidate.id == ElectionCandidate.candidate))
+                                 .where((ElectionCandidate.election == election.id) & (ElectionCandidate.precinct == precinct.id)))
                     Result.create(message=message.id, election=election.id, reporter=reporter.id,
                                   precinct=precinct.id, candidate=candidate.id, votes=vts)
                 except Candidate.DoesNotExist:
                     candidate = None
-                    response['error'].append('Candidate (%s) does not exist.' % cnd)
+                    response['error'].append('Candidate (%s) unauthorized or non-existent.' % cnd)
 
         else:
             message.type = Message.UNKNOWN
