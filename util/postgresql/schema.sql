@@ -60,7 +60,7 @@ create domain d_error_code as int check (value between 0 and 500);
 
 create domain d_party_code as character varying(7) check (value ~ E'^[A-Z]{2,7}$');
 
-create domain d_precinct_code as integer check (value between 1 and 99999);
+create domain d_precinct_code as integer check (value ~ E'^[0-9]{4,6}');
 
 create domain d_candidate_code as character(5) check (value ~ E'^[A-Z]{5}$');
 
