@@ -4,103 +4,81 @@
     <div id="content">
         {% for c in counties %}
             <div class="chart_01 rounded">
-                {% set result = election.results_by_county(c)[0] %}
+                {% set results = election.results_by_county(c) %}
                 {% set votes = election.votes_by_county(c) %}
 
                 <div class="chart_01_box text_d">
                     <div class="chart_01_box_title">{{ c.name }} County</div>
                     {%  include 'svg/' + c.long_code|string + '.svg' %}
                 </div>
-
                 <div class="chart_01_title text_d">
                     <div class="chart_01_title_01">
                         Party
                     </div>
-                    <div class="chart_01_title_02">
-                        Vote %
+                    <div class="chart_01_title_04">
+                        Candidate
                     </div>
                     <div class="chart_01_title_03">
                         Votes
                     </div>
-                    <div class="chart_01_title_04">
-                        Candidate
+                    <div class="chart_01_title_02">
+                        Percentage
                     </div>
                     <div class="chart_01_title_05">
                         <a href="">View More</a>
                     </div>
                 </div>
+
+                {% for r in results if loop.index <= 3 %}
+                {% set color = r.candidate.party(election).color or '555555' %}
                 <div class="chart_01_row_01 text_d">
-                    <div class="chart_01_row_01_01" style="color:#008D45;">
-                        UP
+                    <div class="chart_01_row_01_01" style="color:#{{ color }};">
+                        {{ r.candidate.party(election).code }}
+                    </div>
+                    <div class="chart_01_row_01_05">
+                        {{ r.candidate.name }}
+                    </div>
+                    <div class="chart_01_row_01_04">
+                        {{ r.votes }}
                     </div>
                     <div class="chart_01_row_01_02">
-                        48%
+                        {{ (100 * r.votes / votes)|int }}%
                     </div>
                     <div class="chart_01_row_01_03">
                         <div class="chart_graph">
-                            <div class="chart_bar" style="width:48px; background-color:#008D45;">
+                            <div class="chart_bar"
+                                 style="width:48px; background-color:#{{ color }};">
                             </div>
                         </div>
                     </div>
-                    <div class="chart_01_row_01_04">
-                        100,000
-                    </div>
-                    <div class="chart_01_row_01_05">
-                        Mlen-Too Wesley
-                    </div>
                 </div>
-                <div class="chart_01_row_01 text_d">
-                    <div class="chart_01_row_01_01" style="color:#29A6DD;">
-                        CDC
-                    </div>
-                    <div class="chart_01_row_01_02">
-                        32%
-                    </div>
-                    <div class="chart_01_row_01_03">
-                        <div class="chart_graph">
-                            <div class="chart_bar" style="width:32px; background-color:#29A6DD;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chart_01_row_01_04">
-                        100,000
-                    </div>
-                    <div class="chart_01_row_01_05">
-                        Mlen-Too Wesley
-                    </div>
-                </div>
-                <div class="chart_01_row_01 text_d">
-                    <div class="chart_01_row_01_01" style="color:#F28E1E;">
-                        LP
-                    </div>
-                    <div class="chart_01_row_01_02">
-                        25%
-                    </div>
-                    <div class="chart_01_row_01_03">
-                        <div class="chart_graph">
-                            <div class="chart_bar" style="width:25px; background-color:#F28E1E;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chart_01_row_01_04">
-                        100,000
-                    </div>
-                    <div class="chart_01_row_01_05">
-                        Mlen-Too Wesley
-                    </div>
-                </div>
+                {% endfor %}
+                {% if (results|length - 3) < 0 %}
+                    {% set blanks = 3 - results|length %}
+                    {% for b in range(0,blanks) %}
+                        <div class="chart_01_row_01 text_d"></div>
+                    {% endfor %}
+                {% endif %}
                 <div class="chart_01_row_02 text_b">
                     <div class="chart_01_row_02_01">
-                        Progress: 43 of 79 precincts reporting = 79%
+                        <strong>Status:</strong>
+                        {% set precinct_counts = election.status_by_county(c) %}
+                        {{ precinct_counts.total }} precincts,
+                        {{ precinct_counts.reporting }} reporting,
+                        {{ precinct_counts.completed }} complete ({{ precinct_counts.percentage }}%)
                     </div>
                     <div class="chart_01_row_02_02">
                         <div class="chart_graph">
-                            <div class="chart_bar" style="width:79px;">
+                            <div class="chart_bar" style="width:{{ precinct_counts.percentage }}px;">
                             </div>
                         </div>
                     </div>
                     <div class="chart_01_row_02_03">
-                        Final Results as of 15 Nov 2014 5:00 PM
+                        {% if results %}
+                            Results as of {{ results[0].timestamp.strftime('%d %b %Y %H:%M %p') }}
+                        {% else %}
+                            No results available.
+                        {% endif %}
                     </div>
                 </div>
             </div>

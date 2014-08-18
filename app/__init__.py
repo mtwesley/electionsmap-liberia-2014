@@ -22,8 +22,10 @@ def overview():
 @app.route('/counties')
 def counties():
     counties = County.select()
+    total_precincts = Precinct.select(Precinct.id).where(Precinct.status == 'A').count()
     return render_template('results/counties.html',
                            endpoint='counties',
+                           total_precincts=total_precincts,
                            counties=counties)
 
 

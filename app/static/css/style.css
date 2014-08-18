@@ -407,11 +407,11 @@ img {
 }
 .chart_01_title_04{
 	float:left;
-	width:20%;
+	width:30%;
 }
 .chart_01_title_05{
 	float:left;
-	width:20%;
+	width:10%;
 	font-weight:normal;
 }
 .chart_01_row_01{
@@ -444,7 +444,7 @@ img {
 }
 .chart_01_row_01_05{
 	float:left;
-	width:40%;
+	width:30%;
 }
 .chart_01_row_02{
 	float:left;
@@ -459,20 +459,23 @@ img {
 	border-bottom-right-radius: 5px;
 }
 .chart_01_row_02_01{
+	color:#8C8C8C !important;
 	float:left;
-	width:40%;
+	width:45%;
 	color:#464646;
 	line-height: 30px;
 }
 .chart_01_row_02_02{
+	color:#8C8C8C !important;
 	float:left;
 	width:20%;
 }
 .chart_01_row_02_03{
 	float:left;
-	width:40%;
+	width:34%;
 	color:#8C8C8C;
 	line-height: 30px;
+    text-align: right;
 }
 .chart_graph{
 	float:left;

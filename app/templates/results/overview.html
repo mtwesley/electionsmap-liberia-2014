@@ -13,8 +13,8 @@
                     </div>
                     <div class="overview_data_ITEM_partyColor">
                         <div class="overview_data_ITEM_partyColorBox"
-                             style="background-color: {% if result and result.candidate.party().color %}
-                                 {{ '#' + result.candidate.party().color }}
+                             style="background-color: {% if result and result.candidate.party(election).color %}
+                                 {{ '#' + result.candidate.party(election).color }}
                              {% else %}
                                  #555555
                              {% endif %};">
@@ -27,7 +27,7 @@
                                  #555555
                              {% endif %};">
                         {% if result %}
-                            {{ result.candidate.party().code }}
+                            {{ result.candidate.party(election).code }}
                         {% else %}
                             &nbsp;&nbsp;
                         {% endif %}

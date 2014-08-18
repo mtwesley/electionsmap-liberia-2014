@@ -223,9 +223,10 @@ create table election_candidates (
 );
 
 create table election_reporters (
-  election_id d_id not null, 
+  election_id d_id not null,
   reporter_id d_id not null, 
-  precinct_id d_id not null, 
+  precinct_id d_id not null,
+  is_completed d_bool default false not null,
   timestamp d_timestamp default current_timestamp not null,
 
   constraint election_reporters_pkey primary key (election_id, reporter_id, precinct_id),
@@ -408,3 +409,31 @@ $$
     return x_id;
   end
 $$ language plpgsql;
+
+
+-- aggregate functions
+
+create function first_agg (anyelement, anyelement)
+  returns anyelement language sql immutable strict as
+$$
+  select $1;
+$$;
+
+create aggregate first (
+  sfunc    = first_agg,
+  basetype = anyelement,
+  stype    = anyelement
+);
+
+create function last_agg (anyelement, anyelement)
+  returns anyelement language sql immutable strict as
+$$
+  select $2;
+$$;
+
+create aggregate public.last (
+  sfunc    = last_agg,
+  basetype = anyelement,
+  stype    = anyelement
+);
+

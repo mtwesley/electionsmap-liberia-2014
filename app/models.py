@@ -193,9 +193,10 @@ class Election(BaseModel):
     def results_by_precinct(self, precinct):
         results = []
         sql = Result.RESULTS_BY_PRECINCT_SQL % (str(self.id), str(precinct.id))
-        for (candidate_id, precinct_id, votes) in db.execute_sql(sql):
+        for (candidate_id, precinct_id, timestamp, votes) in db.execute_sql(sql):
             results.append({
                 'candidate': Candidate.get(Candidate.id == candidate_id),
+                'timestamp': timestamp,
                 'votes': votes
             })
         return results
@@ -203,9 +204,10 @@ class Election(BaseModel):
     def results_by_county(self, county):
         results = []
         sql = Result.RESULTS_BY_COUNTY_SQL % (str(self.id), str(county.id))
-        for (candidate_id, county_id, votes) in db.execute_sql(sql):
+        for (candidate_id, county_id, timestamp, votes) in db.execute_sql(sql):
             results.append({
                 'candidate': Candidate.get(Candidate.id == candidate_id),
+                'timestamp': timestamp,
                 'votes': votes
             })
         return results
@@ -213,12 +215,31 @@ class Election(BaseModel):
     def results_total(self):
         results = []
         sql = Result.RESULTS_TOTAL_SQL % (str(self.id))
-        for (candidate_id, votes) in db.execute_sql(sql):
+        for (candidate_id, timestamp, votes) in db.execute_sql(sql):
             results.append({
                 'candidate': Candidate.get(Candidate.id == candidate_id),
+                'timestamp': timestamp,
                 'votes': votes
             })
         return results
+
+    def status_by_county(self, county):
+        precincts = Precinct.select().where((Precinct.status == 'A') & (Precinct.county == county))
+        total = precincts.count()
+        completed = (precincts.distinct()
+                     .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
+                     .where((ElectionReporter.election == self.id) & (ElectionReporter.is_completed == True)).count())
+        reporting = (precincts.distinct()
+                     .join(Result, on=(Precinct.id == Result.precinct))
+                     .join(ElectionReporter, join_type=JOIN_LEFT_OUTER, on=(Precinct.id == ElectionReporter.precinct))
+                     .where(ElectionReporter.election == self.id)
+                     .where((ElectionReporter.is_completed == False) | (ElectionReporter.is_completed == None)).count())
+        return {
+            'total': total,
+            'reporting': reporting,
+            'completed': completed,
+            'percentage': int(completed / total) if total else 0
+        }
 
 
 class ElectionChannel(BaseModel):
@@ -248,6 +269,7 @@ class ElectionReporter(BaseModel):
     election = ForeignKeyField(Election, db_column='election_id')
     reporter = ForeignKeyField(Reporter, db_column='reporter_id')
     precinct = ForeignKeyField(Precinct, db_column='precinct_id')
+    is_completed = BooleanField(default=False)
     timestamp = DateTimeField()
 
 
@@ -354,6 +376,7 @@ FROM (
 SELECT DISTINCT ON (precinct_id, candidate_id)
     results.candidate_id AS candidate_id,
     results.precinct_id AS precinct_id,
+    results.timestamp AS timestamp
     COALESCE(results.votes, 0) AS votes
 FROM results
 WHERE results.election_id IN (%s) AND results.precinct_id IN (%s)
@@ -367,12 +390,14 @@ ORDER BY
 SELECT
     candidate_id,
     county_id,
+    FIRST(timestamp),
     COALESCE(SUM(votes), 0) AS votes
 FROM (
     SELECT DISTINCT ON (precinct_id, candidate_id)
         candidate_id,
         precinct_id,
         county_id,
+        results.timestamp,
         COALESCE(votes, 0) AS votes
     FROM results
     JOIN precincts ON precinct_id = precincts.id
@@ -393,11 +418,13 @@ ORDER BY
     RESULTS_TOTAL_SQL = """
 SELECT
     candidate_id,
+    FIRST(timestamp),
     COALESCE(sum(votes), 0) AS votes
 FROM (
     SELECT DISTINCT ON (precinct_id, candidate_id)
         results.candidate_id AS candidate_id,
         results.precinct_id AS precinct_id,
+        results.timestamp AS timestamp,
         COALESCE(results.votes, 0) AS votes
     FROM results
     WHERE results.election_id IN (%s)

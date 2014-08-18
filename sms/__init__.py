@@ -29,7 +29,8 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
 
     # Possible syntax
     news_syntax = re.compile('^(NEWS|NEW)\s+(.+)', re.IGNORECASE)
-    results_syntax = re.compile('^([0-9]{4,6})', re.IGNORECASE)
+    completed_syntax = re.compile('^([0-9]{4,6})\s+(DONE|COMPLETE|FINISH(ED)?)', re.IGNORECASE)
+    results_syntax = re.compile('^([0-9]{4,6})\s+(([A-Z]{5})\s+([0-9]+))+', re.IGNORECASE)
     candidates_votes_syntax = re.compile('([A-Z]{5})\s+([0-9]+)', re.IGNORECASE)
 
     response = {
@@ -94,6 +95,7 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
 
     # Test whether news or results
     news_matches = re.match(news_syntax, text)
+    completed_matches = re.match(completed_syntax, text)
     results_matches = re.match(results_syntax, text)
 
     try:
@@ -104,6 +106,16 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
 
             news_text = news_matches.group(2)
             News.create(message=message.id, election=election.id, reporter=reporter.id, text=news_text)
+
+        elif completed_matches:
+            message.type = Message.RESULTS
+            message.status = Message.ACCEPTED
+            message.save(force_insert=True)
+            try:
+                ElectionReporter.update(is_completed=True).where(
+                    (ElectionReporter.election == election) & (ElectionReporter.reporter == reporter))
+            except Exception:
+                return 'Completion update failed.'
 
         elif results_matches:
             message.type = Message.RESULTS
