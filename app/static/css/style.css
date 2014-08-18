@@ -363,8 +363,9 @@ img {
 	border: 1px solid #BAB5B5;
 }
 .chart_01_box{
+    position: relative;
 	float:left;
-	width:178px;
+	width:188px;
 	height:148px;
 	margin: 0px;
 	padding: 0px 0px 0px 0px;
@@ -375,9 +376,14 @@ img {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
+.chart_01_box_title{
+    position: absolute;
+    top: 6px;
+    left: 8px;
+}
 .chart_01_title{
 	float:left;
-	width:718px;
+	width:708px;
 	height:30px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
@@ -410,7 +416,7 @@ img {
 }
 .chart_01_row_01{
 	float:left;
-	width:718px;
+	width:708px;
 	height:28px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
@@ -442,7 +448,7 @@ img {
 }
 .chart_01_row_02{
 	float:left;
-	width:718px;
+	width:708px;
 	height:28px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
@@ -607,6 +613,7 @@ img {
 	padding: 0px 0px 0px 20px;
 	background: #DBDBDB;
 	line-height: 40px;
+    font-size:15px;
 }
 .chart_03_row_01{
 	float:left;

@@ -8,10 +8,9 @@
                 {% set votes = election.votes_by_county(c) %}
 
                 <div class="chart_01_box text_d">
+                    <div class="chart_01_box_title">{{ c.name }} County</div>
                     {%  include 'svg/' + c.long_code|string + '.svg' %}
                 </div>
-
-
 
                 <div class="chart_01_title text_d">
                     <div class="chart_01_title_01">
