@@ -1,40 +1,46 @@
-import settings
+from flask import Flask, request, render_template, url_for
 
 from phonenumbers import parse as parse_number, is_possible_number, is_valid_number, format_number, PhoneNumberFormat
 
-from flask import Flask, request
-from playhouse.postgres_ext import PostgresqlExtDatabase
-
 from app.models import *
+from sms.forms import *
 
-# Create application
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
-# Crete database
-db = PostgresqlExtDatabase(database=settings.DB_NAME, host=settings.DB_HOST, port=settings.DB_PORT,
-                           user=settings.DB_USER, password=settings.DB_PASS,
-                           threadlocals=True, autocommit=True, autorollback=True)
+
+@app.route('/test', methods=['GET', 'POST'])
+def test():
+    form = TestForm()
+    response = None
+    if form.validate_on_submit():
+        from_phone = form.from_phone.data
+        to_phone = form.to_phone.data
+        text = form.text.data
+
+        response = sms(from_phone, to_phone, text)
+
+    return render_template('test.html', form=form, response=response)
 
 
 @app.route('/sms')
-def sms():
+def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
     import re
     from datetime import datetime
 
     # Possible syntax
     news_syntax = re.compile('^(NEWS|NEW)\s+(.+)', re.IGNORECASE)
-    results_syntax = re.compile('^([A-Z]{2}?[0-9]{4})', re.IGNORECASE)
-    candidates_votes_syntax = re.compile('(([A-Z]{3})[0-9]{2})\s+([0-9]+)', re.IGNORECASE)
+    results_syntax = re.compile('^([0-9]{4,6})', re.IGNORECASE)
+    candidates_votes_syntax = re.compile('([A-Z]{5})\s+([0-9]+)', re.IGNORECASE)
 
     response = {
         'success': [],
         'error': []
     }
 
-    from_phone = request.args.get('from', None)
-    to_phone = request.args.get('to', None)
-    text = request.args.get('text', None)
-    timestamp = request.args.get('timestamp', None)
+    from_phone = request.args.get('from', from_phone)
+    to_phone = request.args.get('to', to_phone)
+    text = request.args.get('text', text)
+    timestamp = request.args.get('timestamp', timestamp)
 
     # Test originating number
     if from_phone is None:
@@ -63,12 +69,13 @@ def sms():
     election = None
     try:
         channel = Channel.get((Channel.phone == to_phone) & (Channel.status == 'A'))
-        reporter = Reporter.get(Reporter.phone == from_phone)
+        reporter = Reporter.get((Reporter.phone == from_phone) & (Reporter.status == 'A'))
         election = (Election.select().distinct()
                     .join(ElectionChannel, on=(ElectionChannel.election == Election.id))
                     .join(ElectionReporter, on=(ElectionReporter.election == Election.id))
                     .where((ElectionChannel.channel == channel.id) & (ElectionReporter.reporter == reporter.id))
                     .where(SQL("'"+datetime.today().strftime('%Y-%m-%d')+"'").between(Election.from_date, Election.to_date))
+                    .where(Election.status == 'A')
                     .order_by(Election.timestamp.desc()).get())
     except Channel.DoesNotExist:
         response['error'].append('Unauthorized or non-existent channel.')
@@ -92,6 +99,7 @@ def sms():
     try:
         if news_matches:
             message.type = Message.NEWS
+            message.status = Message.ACCEPTED
             message.save(force_insert=True)
 
             news_text = news_matches.group(2)
@@ -99,37 +107,47 @@ def sms():
 
         elif results_matches:
             message.type = Message.RESULTS
+            message.status = Message.ACCEPTED
             message.save(force_insert=True)
 
             candidates_votes_matches = re.findall(candidates_votes_syntax, text)
             try:
                 pct = results_matches.group(1)
-                precinct = (Precinct.get(Precinct.code == pct.upper())
+                precinct = (Precinct.select().distinct()
                             .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
-                            .where((ElectionReporter.election == election.id) & (ElectionReporter.reporter == reporter.id)))
+                            .where((Precinct.code == pct.upper()) & (Precinct.status == 'A'))
+                            .where(ElectionReporter.election == election.id)
+                            .where(ElectionReporter.reporter == reporter.id).get())
             except Precinct.DoesNotExist:
-                precinct = None
                 return 'Precinct (%s) unauthorized or non-existent.' % pct.upper()
 
-            for (cnd, sh_cnd, vts) in candidates_votes_matches:
+            for (cnd, vts) in candidates_votes_matches:
                 try:
-                    candidate = (Candidate.get(Candidate.code == cnd.upper())
+                    candidate = (Candidate.select().distinct()
                                  .join(ElectionCandidate, on=(Candidate.id == ElectionCandidate.candidate))
-                                 .where((ElectionCandidate.election == election.id) & (ElectionCandidate.precinct == precinct.id)))
+                                 .where((Candidate.code == cnd.upper()) & (Candidate.status == 'A'))
+                                 .where(ElectionCandidate.election == election.id)
+                                 .where(ElectionCandidate.precinct == precinct.id).get())
                     Result.create(message=message.id, election=election.id, reporter=reporter.id,
                                   precinct=precinct.id, candidate=candidate.id, votes=vts)
                 except Candidate.DoesNotExist:
-                    candidate = None
                     response['error'].append('Candidate (%s) unauthorized or non-existent.' % cnd)
 
         else:
-            message.type = Message.UNKNOWN
+            # TODO: For now, consider unknown messages as news
+            message.type = Message.NEWS  # Message.UNKNOWN
+            message.status = Message.ACCEPTED  # Message.REJECTED
             message.save(force_insert=True)
 
-            return 'Message type could not be determined.'
+            News.create(message=message.id, election=election.id, reporter=reporter.id, text=message.text)
+
+            return 'Message type could not be determined -- defaulting as news.'
 
     except Exception:
-        return 'Message could not be saved.'
+        message.status = Message.REJECTED
+        message.save(force_insert=True)
+
+        return 'Message parsing failed.'
 
     if response['error']:
         return 'Message received with errors. ' + ' '.join(response['error'])

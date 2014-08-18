@@ -2,6 +2,9 @@
 DEBUG = True
 TESTING = True
 
+# Session
+SECRET_KEY = 'hushhush'
+
 # Applications
 APP_PORT = 8080
 SMS_PORT = 5555

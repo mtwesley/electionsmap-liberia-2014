@@ -1,0 +1,51 @@
+{% extends "layout/web.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    <div id="content">
+        <div id="overview_map" class="rounded">{% include 'svg/LR.svg' %}</div>
+        <div id="overview_data" class="rounded">
+            {% for c in counties %}
+                {% set result = election.results_by_county(c)[0] %}
+                {% set votes = election.votes_by_county(c) %}
+                <div class="overview_data_ITEM">
+                    <div class="text_a overview_data_ITEM_county">
+                        {{ c.name }}
+                    </div>
+                    <div class="overview_data_ITEM_partyColor">
+                        <div class="overview_data_ITEM_partyColorBox"
+                             style="background-color: {% if result and result.candidate.party().color %}
+                                 {{ '#' + result.candidate.party().color }}
+                             {% else %}
+                                 #555555
+                             {% endif %};">
+                        </div>
+                    </div>
+                    <div class="text_a overview_data_ITEM_partyName"
+                         style="color: {% if result and result.candidate.party().color %}
+                                 {{ '#' + result.candidate.party().color }}
+                             {% else %}
+                                 #555555
+                             {% endif %};">
+                        {% if result %}
+                            {{ result.candidate.party().code }}
+                        {% else %}
+                            &nbsp;&nbsp;
+                        {% endif %}
+                    </div>
+                    <div class="text_a overview_data_ITEM_percent">
+                        {% if result and votes %}
+                            {{ (100 * result.votes / votes)|int }}%
+                        {% else %}
+                            0%
+                        {% endif %}
+                    </div>
+                    <div class="text_a overview_data_ITEM_candidate">
+                        {% if result %}
+                            {{ result.candidate.name }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

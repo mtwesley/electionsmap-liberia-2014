@@ -19,6 +19,7 @@ class ElectionForm(Form):
     year = SelectField('Year', [DataRequired()], choices=[(y, y) for y in range(2014, 2020)])
     from_date = DateField('From', [DataRequired()])
     to_date = DateField('To', [DataRequired()])
+    status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')
 
 
 class ChannelForm(Form):
@@ -32,16 +33,21 @@ class PartyForm(Form):
     name = StringField('Name', [DataRequired()])
     code = StringField('Code', [DataRequired()])
     description = StringField('Description')
+    color = StringField('Color')
     photo = FileField('Photo')
+    status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')
 
 
 class CandidateForm(Form):
     name = StringField('Name', [DataRequired()])
     code = StringField('Candidate', [DataRequired()])
-    description = TextAreaField('Description')
+    biography = TextAreaField('Biography')
     platform = TextAreaField('Platform')
-    party = SelectField('Party', [DataRequired()], choices=[(p.id, p.name) for p in Party.select()])
+    birth_date = DateField('DOB'),
+    phone = StringField('Phone'),
+    email = StringField('Email'),
     photo = FileField('Photo')
+    status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')
 
 
 class ReporterForm(Form):
@@ -49,6 +55,7 @@ class ReporterForm(Form):
     phone = StringField('Phone', [DataRequired()])
     email = StringField('Email', [DataRequired()])
     photo = FileField('Photo')
+    status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')
 
 
 class CountyForm(Form):
@@ -60,6 +67,7 @@ class CountyForm(Form):
     latitude = DecimalField('Latitude', [DataRequired()])
     flag = FileField('Flag')
     photo = FileField('Photo')
+    status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')
 
 
 class PrecinctForm(Form):
@@ -73,3 +81,4 @@ class PrecinctForm(Form):
     latitude = DecimalField('Latitude', [DataRequired()])
     county = SelectField('County', [DataRequired()], choices=[(c.id, c.name) for c in County.select()])
     photo = FileField('Photo')
+    status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')

@@ -60,7 +60,7 @@ create domain d_error_code as int check (value between 0 and 500);
 
 create domain d_party_code as character varying(7) check (value ~ E'^[A-Z]{2,7}$');
 
-create domain d_precinct_code as integer check (value ~ E'^[0-9]{4,6}');
+create domain d_precinct_code as integer check (value between 1000 and 99999);
 
 create domain d_candidate_code as character(5) check (value ~ E'^[A-Z]{5}$');
 
@@ -90,7 +90,7 @@ create table channels (
   name d_text_short unique not null,
   description d_text_medium, 
   phone d_phone unique not null,
-  status d_status default 'P' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
+  status d_status default 'R' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint channels_pkey primary key (id)
@@ -114,9 +114,13 @@ create table candidates (
   id serial not null, 
   name d_text_short not null,
   code d_candidate_code unique not null,
-  description d_text_medium, 
+  biography d_text_medium,
   platform d_text_medium,
+  birth_date d_date,
+  phone d_phone,
+  email d_email,
   photo_id d_id,
+  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint candidates_pkey primary key (id),
@@ -126,10 +130,11 @@ create table candidates (
 
 create table reporters (
   id serial not null, 
-  name d_text_short unique not null,
+  name d_text_short not null,
   phone d_phone unique not null,
-  email d_email unique not null,
+  email d_email unique,
   photo_id d_id,
+  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint reporters_pkey primary key (id),
@@ -157,17 +162,17 @@ create table counties (
 
 create table precincts (
   id serial not null,
-  name d_text_short not null,
   code d_precinct_code unique not null,
+  name d_text_medium not null,
   district d_text_short,
-  city d_text_short,
-  address d_text_short,
+  location d_text_medium,
   contact_name d_text_short,
   contact_phone d_phone,
   longitude d_longitude,
   latitude d_latitude,
   county_id d_id not null,
   photo_id d_id,
+  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint precincts_pkey primary key (id),
@@ -185,6 +190,7 @@ create table elections (
   year d_year not null,
   from_date d_date not null,
   to_date d_date not null,
+  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint elections_pkey primary key (id)
@@ -291,10 +297,30 @@ create table news (
 );
 
 
+-- views
+
+create view latest_results
+  as
+select distinct on (precinct_id, candidate_id)
+    results.id as id,
+    results.message_id as message_id,
+    results.reporter_id as reporter_id,
+    results.election_id as election_id,
+    results.precinct_id as precinct_id,
+    results.candidate_id as candidate_id,
+    results.timestamp as timestamp
+from results
+order by
+    results.precinct_id,
+    results.candidate_id,
+    results.timestamp desc;
+
+
 -- indexes
 
-create index precincts_city on precincts (city);
+create index precincts_location on precincts (location);
 create index precincts_coordinates on precincts (longitude, latitude);
+create index precincts_status on precincts (status);
 
 create index elections_type on elections (type);
 create index elections_dates on elections (from_date, to_date);

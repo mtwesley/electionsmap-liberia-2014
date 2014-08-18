@@ -705,13 +705,13 @@ insert into precincts (code, county_id, name, location, district) values (33207,
 insert into precincts (code, county_id, name, location, district) values (33208, (select id from counties where name ilike '%NIMBA%'), 'Zuaplay Public School', 'Zuaplay', 'District 05');
 insert into precincts (code, county_id, name, location, district) values (33212, (select id from counties where name ilike '%NIMBA%'), 'Zuolay Chief Compound', 'Zuolay', 'District 09');
 insert into precincts (code, county_id, name, location, district) values (33213, (select id from counties where name ilike '%NIMBA%'), 'Zuoplay Public School', 'Zuoplay', 'District 04');
-insert into precincts (code, county_id, name, location, district) values (36011, (select id from counties where name ilike '%RIVER CESS%'), 'Little Liberia School Building', 'Little Liberia Village', 'District 02');
-insert into precincts (code, county_id, name, location, district) values (36015, (select id from counties where name ilike '%RIVER CESS%'), 'DangronGbor Church', 'Dangron Gbor Town', 'District 02');
-insert into precincts (code, county_id, name, location, district) values (36019, (select id from counties where name ilike '%RIVER CESS%'), 'Charlie School Building', 'Charlie', 'District 02');
-insert into precincts (code, county_id, name, location, district) values (36024, (select id from counties where name ilike '%RIVER CESS%'), 'Voin Palava Hut', 'Voin Town', 'District 02');
-insert into precincts (code, county_id, name, location, district) values (36033, (select id from counties where name ilike '%RIVER CESS%'), 'Borbor Palava Hut', 'Borbor', 'District 02');
-insert into precincts (code, county_id, name, location, district) values (36034, (select id from counties where name ilike '%RIVER CESS%'), 'Garyeazohn Palava Hut', 'Garyeazohn', 'District 02');
-insert into precincts (code, county_id, name, location, district) values (36041, (select id from counties where name ilike '%RIVER CESS%'), 'Cestos High School', 'Cestos', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36011, (select id from counties where name ilike '%RIVERCESS%'), 'Little Liberia School Building', 'Little Liberia Village', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36015, (select id from counties where name ilike '%RIVERCESS%'), 'DangronGbor Church', 'Dangron Gbor Town', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36019, (select id from counties where name ilike '%RIVERCESS%'), 'Charlie School Building', 'Charlie', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36024, (select id from counties where name ilike '%RIVERCESS%'), 'Voin Palava Hut', 'Voin Town', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36033, (select id from counties where name ilike '%RIVERCESS%'), 'Borbor Palava Hut', 'Borbor', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36034, (select id from counties where name ilike '%RIVERCESS%'), 'Garyeazohn Palava Hut', 'Garyeazohn', 'District 02');
+insert into precincts (code, county_id, name, location, district) values (36041, (select id from counties where name ilike '%RIVERCESS%'), 'Cestos High School', 'Cestos', 'District 02');
 insert into precincts (code, county_id, name, location, district) values (42002, (select id from counties where name ilike '%RIVER GEE%'), 'Webbo Teacher Training Institute', 'Kronoken location', 'District 03');
 insert into precincts (code, county_id, name, location, district) values (42004, (select id from counties where name ilike '%RIVER GEE%'), 'Chea Cheapo Elementry School', 'Old Yassaken Town', 'District 03');
 insert into precincts (code, county_id, name, location, district) values (42005, (select id from counties where name ilike '%RIVER GEE%'), 'Geeken Public School', 'Geeken', 'District 02');
@@ -750,6 +750,8 @@ insert into precincts (code, county_id, name, location, district) values (45055,
 insert into candidates (name, code) values ('George Foola', 'GRGFL');
 insert into candidates (name, code) values ('Foola Foola', 'FLFLA');
 insert into candidates (name, code) values ('George George', 'GRGRG');
+insert into candidates (name, code) values ('Hansa Hansa', 'HANSA');
+insert into candidates (name, code) values ('Kebeh Kebeh', 'KEBEH');
 
 -- reporters
 
@@ -763,7 +765,22 @@ insert into channels (name, phone, status) values ('Fake', '0000', 'A');
 
 insert into elections (type, year, from_date, to_date) values ('S', 2014, '2014-01-01', '2014-12-31');
 insert into election_channels (election_id, channel_id) values (lookup_election_id('S', 2014), lookup_channel_id('0000'));
+
+-- 3001 precinct = Bomi County
+
 insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('3001'));
 insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GRGRG'), lookup_precinct_id('3001'), lookup_party_id('CDC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FLFLA'), lookup_precinct_id('3001'), lookup_party_id('UP'));
 
+-- 3002 precinct = Bomi County
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('3002'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GRGRG'), lookup_precinct_id('3002'), lookup_party_id('CDC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FLFLA'), lookup_precinct_id('3002'), lookup_party_id('UP'));
+
+-- 15050 precinct = Grand Gedeh County
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('15050'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('HANSA'), lookup_precinct_id('15050'), lookup_party_id('LTP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('KEBEH'), lookup_precinct_id('15050'), lookup_party_id('PPP'));
 

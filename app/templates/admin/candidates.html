@@ -1,0 +1,21 @@
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Platform</th>
+        <th></th>
+    </tr>
+    {% for c in candidates %}
+    <tr>
+        <td>{{ c.name }}</td>
+        <td>{{ c.code }}</td>
+        <td>{{ c.description }}</td>
+        <td>{{ c.platform }}</td>
+        <td>
+            Edit
+            Delete
+        </td>
+    </tr>
+    {% endfor %}
+</table>

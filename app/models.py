@@ -1,6 +1,11 @@
-from peewee import *
+import settings
 
-from app import db
+from peewee import *
+from playhouse.postgres_ext import PostgresqlExtDatabase
+
+db = PostgresqlExtDatabase(database=settings.DB_NAME, host=settings.DB_HOST, port=settings.DB_PORT,
+                           user=settings.DB_USER, password=settings.DB_PASS,
+                           threadlocals=True, autocommit=True, autorollback=True)
 
 
 class BaseModel(Model):
@@ -12,6 +17,9 @@ class BaseModel(Model):
 
 
 class Media(BaseModel):
+    PHOTO = 'P'
+    VIDEO = 'V'
+
     class Meta:
         db_table = 'media'
 
@@ -27,6 +35,10 @@ class Media(BaseModel):
 
 
 class Channel(BaseModel):
+    PENDING = 'P'
+    ACCEPTED = 'A'
+    REJECTED = 'R'
+
     class Meta:
         db_table = 'channels'
         order_by = ('name',)
@@ -35,7 +47,7 @@ class Channel(BaseModel):
     name = TextField()
     description = TextField(null=True)
     phone = CharField(max_length=10)
-    status = CharField(max_length=1, default='P')
+    status = CharField(max_length=1, default='R')
     timestamp = DateTimeField()
 
 
@@ -47,8 +59,10 @@ class Party(BaseModel):
     id = PrimaryKeyField()
     name = TextField()
     code = CharField(max_length=7, unique=True)
-    description = TextField()
+    description = TextField(null=True)
+    color = TextField(null=True)
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
+    status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
 
 
@@ -60,10 +74,30 @@ class Candidate(BaseModel):
     id = PrimaryKeyField()
     name = TextField()
     code = CharField(max_length=5, unique=True)
-    description = TextField()
+    biography = TextField(null=True)
+    birth_date = DateField(null=True),
+    phone = TextField(null=True),
+    email = TextField(null=True),
     platform = TextField()
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
+    status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
+
+    def party(self, election=None):
+        query = (Party.select()
+                 .join(ElectionCandidate, on=(Party.id == ElectionCandidate.party))
+                 .join(Candidate, on=(ElectionCandidate.candidate == Candidate.id))
+                 .join(Election, on=(ElectionCandidate.election == Election.id))
+                 .where((Candidate.id == self.id) & (Election.status == 'A'))
+                 .order_by(Election.to_date.desc()).limit(1))
+
+        if election is not None:
+            query.where(Election.id == election.id)
+
+        try:
+            return query.get()
+        except Party.DoesNotExist:
+            return None
 
 
 class Reporter(BaseModel):
@@ -72,10 +106,11 @@ class Reporter(BaseModel):
         order_by = ('name',)
 
     id = PrimaryKeyField()
-    name = TextField(unique=True)
-    phone = CharField(max_length=10)
-    email = CharField(unique=True, max_length=100)
+    name = TextField()
+    phone = CharField(unique=True)
+    email = CharField(null=True, unique=True)
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
+    status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
 
 
@@ -102,31 +137,88 @@ class Precinct(BaseModel):
         order_by = ('name',)
 
     id = PrimaryKeyField()
-    name = TextField()
     code = CharField(unique=True, max_length=4)
-    address = TextField()
-    city = TextField()
+    name = TextField()
+    district = TextField(null=True)
+    location = TextField(null=True)
     contact_name = TextField(null=True)
-    contact_phone = CharField(max_length=10)
-    longitude = DecimalField(max_digits=9, decimal_places=6)
-    latitude = DecimalField(max_digits=8, decimal_places=6)
+    contact_phone = CharField(null=True)
+    longitude = DecimalField(null=True, max_digits=9, decimal_places=6)
+    latitude = DecimalField(null=True, max_digits=8, decimal_places=6)
     county = ForeignKeyField(County, related_name='precincts', db_column='county_id')
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
+    status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
 
 
 class Election(BaseModel):
+    PRESIDENTIAL = 'P'
+    SENATORIAL = 'S'
+    REPRESENTATIVE = 'R'
+
     class Meta:
         db_table = 'elections'
         order_by = ('-year',)
 
     id = PrimaryKeyField()
     type = CharField(max_length=1)
-    description = TextField()
+    description = TextField(null=True)
     year = DecimalField(max_digits=4)
     from_date = DateField(null=True)
     to_date = DateField(null=True)
+    status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
+
+    def votes_by_precinct(self, precinct):
+        votes = db.execute_sql(Result.VOTES_BY_PRECINCT_SQL % (str(self.id), str(precinct.id))).fetchone()
+        if votes is None:
+            return 0
+        else:
+            return votes[1]
+
+    def votes_by_county(self, county):
+        votes = db.execute_sql(Result.VOTES_BY_COUNTY_SQL % (str(self.id), str(county.id))).fetchone()
+        if votes is None:
+            return 0
+        else:
+            return votes[1]
+
+    def votes_total(self, county):
+        votes = db.execute_sql(Result.VOTES_TOTAL_SQL % (str(self.id), str(county.id))).fetchone()
+        if votes is None:
+            return 0
+        else:
+            return votes[0]
+
+    def results_by_precinct(self, precinct):
+        results = []
+        sql = Result.RESULTS_BY_PRECINCT_SQL % (str(self.id), str(precinct.id))
+        for (candidate_id, precinct_id, votes) in db.execute_sql(sql):
+            results.append({
+                'candidate': Candidate.get(Candidate.id == candidate_id),
+                'votes': votes
+            })
+        return results
+
+    def results_by_county(self, county):
+        results = []
+        sql = Result.RESULTS_BY_COUNTY_SQL % (str(self.id), str(county.id))
+        for (candidate_id, county_id, votes) in db.execute_sql(sql):
+            results.append({
+                'candidate': Candidate.get(Candidate.id == candidate_id),
+                'votes': votes
+            })
+        return results
+
+    def results_total(self):
+        results = []
+        sql = Result.RESULTS_TOTAL_SQL % (str(self.id))
+        for (candidate_id, votes) in db.execute_sql(sql):
+            results.append({
+                'candidate': Candidate.get(Candidate.id == candidate_id),
+                'votes': votes
+            })
+        return results
 
 
 class ElectionChannel(BaseModel):
@@ -164,6 +256,10 @@ class Message(BaseModel):
     RESULTS = 'R'
     UNKNOWN = 'U'
 
+    PENDING = 'P'
+    ACCEPTED = 'A'
+    REJECTED = 'R'
+
     class Meta:
         db_table = 'messages'
         order_by = ('-timestamp',)
@@ -190,6 +286,132 @@ class MessageError(BaseModel):
 
 
 class Result(BaseModel):
+
+    VOTES_BY_PRECINCT_SQL = """
+SELECT
+    precinct_id,
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    WHERE election_id IN (%s) AND precinct_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    precinct_id
+ORDER BY
+    votes DESC
+"""
+
+    VOTES_BY_COUNTY_SQL = """
+SELECT
+    county_id,
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        county_id,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    JOIN precincts ON precinct_id = precincts.id
+    WHERE election_id IN (%s) AND county_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    county_id
+ORDER BY
+    votes DESC
+"""
+
+    VOTES_TOTAL_SQL = """
+SELECT
+    COALESCE(sum(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        results.candidate_id AS candidate_id,
+        results.precinct_id AS precinct_id,
+        COALESCE(results.votes, 0) AS votes
+    FROM results
+    WHERE results.election_id IN (%s)
+    ORDER BY
+        results.precinct_id,
+        results.candidate_id,
+        results.timestamp DESC
+) AS precinct_results
+"""
+
+    RESULTS_BY_PRECINCT_SQL = """
+SELECT DISTINCT ON (precinct_id, candidate_id)
+    results.candidate_id AS candidate_id,
+    results.precinct_id AS precinct_id,
+    COALESCE(results.votes, 0) AS votes
+FROM results
+WHERE results.election_id IN (%s) AND results.precinct_id IN (%s)
+ORDER BY
+    results.precinct_id,
+    results.candidate_id,
+    results.timestamp DESC
+"""
+
+    RESULTS_BY_COUNTY_SQL = """
+SELECT
+    candidate_id,
+    county_id,
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        county_id,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    JOIN precincts ON precinct_id = precincts.id
+    WHERE election_id IN (%s) AND county_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    candidate_id,
+    county_id
+ORDER BY
+    county_id,
+    votes DESC
+"""
+
+    RESULTS_TOTAL_SQL = """
+SELECT
+    candidate_id,
+    COALESCE(sum(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        results.candidate_id AS candidate_id,
+        results.precinct_id AS precinct_id,
+        COALESCE(results.votes, 0) AS votes
+    FROM results
+    WHERE results.election_id IN (%s)
+    ORDER BY
+        results.precinct_id,
+        results.candidate_id,
+        results.timestamp DESC
+) AS precinct_results
+GROUP BY
+    candidate_id
+ORDER BY
+    votes DESC
+"""
+
     class Meta:
         db_table = 'results'
         order_by = ('-timestamp',)
@@ -200,6 +422,21 @@ class Result(BaseModel):
     reporter = ForeignKeyField(Reporter, related_name='results', db_column='reporter_id')
     precinct = ForeignKeyField(Precinct, related_name='results', db_column='precinct_id')
     candidate = ForeignKeyField(Candidate, related_name='results', db_column='candidate_id')
+    votes = IntegerField()
+    timestamp = DateTimeField()
+
+
+class LatestResult(BaseModel):
+    class Meta:
+        db_table = 'latest_results'
+        order_by = ('-timestamp',)
+
+    id = PrimaryKeyField()
+    message = ForeignKeyField(Message, db_column='message_id')
+    election = ForeignKeyField(Election, db_column='election_id')
+    reporter = ForeignKeyField(Reporter, db_column='reporter_id')
+    candidate = ForeignKeyField(Candidate, db_column='candidate_id')
+    precinct = ForeignKeyField(Precinct, db_column='precinct_id')
     votes = IntegerField()
     timestamp = DateTimeField()
 

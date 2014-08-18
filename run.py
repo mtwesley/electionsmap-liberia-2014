@@ -1,14 +1,17 @@
 import sys
 import settings
 
+from app.models import db
+
+
 # Get application from command line
 application = sys.argv[1]
 
 if application == 'app':
-    from app import app, db
+    from app import app
 
 elif application == 'sms':
-    from sms import app, db
+    from sms import app
 
 # Configure settings
 app.config.from_object(settings)
@@ -17,4 +20,5 @@ app.config.from_object(settings)
 db.connect()
 
 # Initialize application
-app.run(port=app.config[application.upper() + '_PORT'])
+if __name__ == "__main__":
+    app.run(port=app.config[application.upper() + '_PORT'])

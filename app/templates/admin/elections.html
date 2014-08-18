@@ -1,0 +1,23 @@
+<table border="1">
+    <tr>
+        <th>Type</th>
+        <th>Year</th>
+        <th>Description</th>
+        <th>From</th>
+        <th>To</th>
+        <th></th>
+    </tr>
+    {% for e in elections %}
+    <tr>
+        <td>{{ e.type }}</td>
+        <td>{{ e.year }}</td>
+        <td>{{ e.description }}</td>
+        <td>{{ e.from_date }}</td>
+        <td>{{ e.to_date }}</td>
+        <td>
+            Edit
+            Delete
+        </td>
+    </tr>
+    {% endfor %}
+</table>
