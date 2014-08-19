@@ -1,4 +1,4 @@
-from flask import Flask, abort, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template
 
 from app.models import *
 
