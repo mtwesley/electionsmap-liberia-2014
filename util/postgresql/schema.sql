@@ -119,7 +119,7 @@ create table candidates (
   platform d_text_medium,
   birth_date d_date,
   phone d_phone,
-  website d_text_medium
+  website d_text_medium,
   email d_email,
   photo_id d_id,
   d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
