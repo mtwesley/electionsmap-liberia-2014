@@ -122,7 +122,7 @@ create table candidates (
   website d_text_medium,
   email d_email,
   photo_id d_id,
-  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
+  status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint candidates_pkey primary key (id),
@@ -136,7 +136,7 @@ create table reporters (
   phone d_phone unique not null,
   email d_email unique,
   photo_id d_id,
-  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
+  status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint reporters_pkey primary key (id),
@@ -174,7 +174,7 @@ create table precincts (
   latitude d_latitude,
   county_id d_id not null,
   photo_id d_id,
-  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
+  status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint precincts_pkey primary key (id),
@@ -192,7 +192,7 @@ create table elections (
   year d_year not null,
   from_date d_date not null,
   to_date d_date not null,
-  d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
+  status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint elections_pkey primary key (id)
