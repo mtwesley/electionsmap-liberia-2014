@@ -27,6 +27,35 @@ img {
 	border:0px;
 	}
 
+
+table {
+	width:100%;
+	margin: 0px;
+	padding:0px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+tr {
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+th {
+	margin: 0px;
+	padding: 10px 20px 10px 20px;
+	background: #DBDBDB;
+	font-weight:bold;
+	border: 1px solid #BAB5B5;
+}
+
+td {
+	margin: 0px;
+	padding: 10px 20px 10px 20px;
+	border: 1px solid #BAB5B5;
+}
+
 .rounded{
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
@@ -355,6 +384,33 @@ img {
 	text-align:left;
 }
 
+a.view_candidate, a.view_candidate:link,
+a.view_candidate:visited, a.view_candidate:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+a.view_candidate:hover {
+    text-decoration: underline !important;
+}
+
+a.view_more, a.view_more:link,
+a.view_more:visited, a.view_more:active {
+    background: #bab5b5;
+    border-bottom: 1px solid #888888;
+    border-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-bottomright: 2px;
+    color: #ffffff !important;
+    font-size: 11px;
+    padding: 2px 5px;
+    text-decoration: none !important;
+}
+a.view_more:hover {
+    background: #888888;
+}
+
 .chart_01 {
 	float:left;
 	width:918px;
@@ -515,64 +571,69 @@ img {
 
 .chart_02 {
 	float:left;
-	width:918px;
-	margin: 0px 0px 10px 0px;
+	width:667px;
+	margin: 0px 0px 10px 9px;
 	padding:0px;
 	border: 1px solid #BAB5B5;
 }
 .chart_02_box{
 	float:left;
 	width:240px;
-	height:200px;
 	margin: 0px;
 	padding: 0px 0px 0px 0px;
 	font-weight:bold;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+    border: 1px solid #bab5b5;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
 }
 .chart_02_title_01{
 	float:left;
-	width:318px;
-	height:40px;
+	width:647px;
+	height:30px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
 	background: #DBDBDB;
-	line-height: 40px;
+	line-height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    font-size: 15px;
+    font-weight: bold;
 }
 .chart_02_title_02{
 	float:left;
-	width:318px;
-	height:38px;
+	width:645px;
+	height:28px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
-	line-height: 40px;
+	line-height: 30px;
 	border: 1px solid #E2E0DF;
 	-moz-border-radius-topright: 5px;
 	border-top-right-radius: 5px;
 }
 .chart_02_row_01{
 	float:left;
-	width:317px;
-	height:38px;
+	width:647px;
+	height:28px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
-	border: 1px solid #E2E0DF;
-	line-height: 40px;
+	border: solid #E2E0DF;
+    border-width: 1px 0;
+	line-height: 30px;
 }
 .candidate_data_ITEM_partyColorBox{
 	float:left;
 	width:15px;
 	height:15px;
-	margin:12px 0px 0px 0px;
+	margin:7px 0px 0px 0px;
 	background-color:#cccccc;
 }
 
 .candidate_data_ITEM_partyName{
 	float:left;
-	margin:0px 0px 0px 10px;
-	line-height:40px;
+	margin:0px 0px 0px 7px;
+	line-height:30px;
 	text-align:left;
 	color:#cccccc;
 }
@@ -589,14 +650,16 @@ img {
 }
 .chart_02_row_02{
 	float:left;
-	width:658px;
-	height:38px;
+	width:647px;
+	height:28px;
 	margin: 0px;
 	padding: 0px 0px 0px 20px;
 	background: #F2F2F2;
 	border-top: 1px solid #E2E0DF;
 	border-bottom: 1px solid #E2E0DF;
+	-moz-border-radius-bottomleft: 5px;
 	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
 
@@ -604,7 +667,7 @@ img {
 .chart_03 {
 	float:left;
 	width:918px;
-	margin: 0px 0px 10px 0px;
+	margin: 10px 0 0;
 	padding:0px;
 	border: 1px solid #BAB5B5;
 }

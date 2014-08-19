@@ -747,11 +747,22 @@ insert into precincts (code, county_id, name, location, district) values (45055,
 
 -- candidates
 
-insert into candidates (name, code) values ('George Foola', 'GRGFL');
-insert into candidates (name, code) values ('Foola Foola', 'FLFLA');
-insert into candidates (name, code) values ('George George', 'GRGRG');
-insert into candidates (name, code) values ('Hansa Hansa', 'HANSA');
-insert into candidates (name, code) values ('Kebeh Kebeh', 'KEBEH');
+insert into candidates (name,code) values ('Dusty Lawrence Wolokolie', 'DLWLK');
+insert into candidates (name,code) values ('Monica Dokie Borbor', 'MNDBR');
+insert into candidates (name,code) values ('Jeremiah  Tarway', 'JTARW');
+insert into candidates (name,code) values ('Lawrence Ashton George, Sr.', 'LAGRG');
+insert into candidates (name,code) values ('Edward Gbortoe Deshield', 'EGDSH');
+insert into candidates (name,code) values ('Jerry Kollie Woah-Tee', 'JKWTE');
+insert into candidates (name,code) values ('Zizi Kolubah Zubah', 'ZKZUB');
+insert into candidates (name,code) values ('Richard K. Floma', 'RKFLO');
+insert into candidates (name,code) values ('J. Rudolph Marsh, Sr.', 'JRMSH');
+insert into candidates (name,code) values ('Alloycious Dennis Wolloh', 'ADWLL');
+insert into candidates (name,code) values ('George Manneh Weah', 'GWEAH');
+insert into candidates (name,code) values ('Cyrus Inphason Cromah', 'CCROM');
+insert into candidates (name,code) values ('Franklyn Obed Siakor', 'FOSIA');
+insert into candidates (name,code) values ('James Laveli Supuwood', 'JLSUP');
+insert into candidates (name,code) values ('Joseph Nyuman Boakai', 'JNBKI');
+insert into candidates (name,code) values ('Jemeon Alphonso Sando', 'JASAN');
 
 -- reporters
 
@@ -769,18 +780,12 @@ insert into election_channels (election_id, channel_id) values (lookup_election_
 -- 3001 precinct = Bomi County
 
 insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('3001'));
-insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GRGRG'), lookup_precinct_id('3001'), lookup_party_id('CDC'));
-insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FLFLA'), lookup_precinct_id('3001'), lookup_party_id('UP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GWEAH'), lookup_precinct_id('3001'), lookup_party_id('CDC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JNBKI'), lookup_precinct_id('3001'), lookup_party_id('UP'));
 
 -- 3002 precinct = Bomi County
 
 insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('3002'));
-insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GRGRG'), lookup_precinct_id('3002'), lookup_party_id('CDC'));
-insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FLFLA'), lookup_precinct_id('3002'), lookup_party_id('UP'));
-
--- 15050 precinct = Grand Gedeh County
-
-insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('15050'));
-insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('HANSA'), lookup_precinct_id('15050'), lookup_party_id('LTP'));
-insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('KEBEH'), lookup_precinct_id('15050'), lookup_party_id('PPP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GWEAH'), lookup_precinct_id('3002'), lookup_party_id('CDC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JNBKI'), lookup_precinct_id('3002'), lookup_party_id('UP'));
 

@@ -42,10 +42,12 @@ class CandidateForm(Form):
     name = StringField('Name', [DataRequired()])
     code = StringField('Candidate', [DataRequired()])
     biography = TextAreaField('Biography')
+    description = TextAreaField('Description')
     platform = TextAreaField('Platform')
-    birth_date = DateField('DOB'),
-    phone = StringField('Phone'),
-    email = StringField('Email'),
+    birth_date = DateField('DOB')
+    phone = StringField('Phone')
+    website = StringField('Website')
+    email = StringField('Email')
     photo = FileField('Photo')
     status = SelectField('Status', [DataRequired()], choices=[('P', 'Pending'), ('A', 'Active'), ('R', 'Inactive')], default='A')
 

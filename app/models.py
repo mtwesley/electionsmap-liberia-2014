@@ -74,10 +74,12 @@ class Candidate(BaseModel):
     id = PrimaryKeyField()
     name = TextField()
     code = CharField(max_length=5, unique=True)
+    description = TextField(null=True)
     biography = TextField(null=True)
-    birth_date = DateField(null=True),
-    phone = TextField(null=True),
-    email = TextField(null=True),
+    birth_date = DateField(null=True)
+    phone = TextField(null=True)
+    website = TextField(null=True)
+    email = TextField(null=True)
     platform = TextField()
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
     status = CharField(max_length=1, default='A')
@@ -190,38 +192,53 @@ class Election(BaseModel):
         else:
             return votes[0]
 
-    def results_by_precinct(self, precinct):
+    def results_by_precinct(self, precinct, candidate=None):
         results = []
         sql = Result.RESULTS_BY_PRECINCT_SQL % (str(self.id), str(precinct.id))
         for (candidate_id, precinct_id, timestamp, votes) in db.execute_sql(sql):
-            results.append({
+            result = {
                 'candidate': Candidate.get(Candidate.id == candidate_id),
                 'timestamp': timestamp,
                 'votes': votes
-            })
+            }
+            if (candidate is not None) and (candidate_id == candidate.id):
+                return result
+            results.append(result)
         return results
 
-    def results_by_county(self, county):
+    def results_by_county(self, county, candidate=None):
         results = []
         sql = Result.RESULTS_BY_COUNTY_SQL % (str(self.id), str(county.id))
         for (candidate_id, county_id, timestamp, votes) in db.execute_sql(sql):
-            results.append({
+            result = {
                 'candidate': Candidate.get(Candidate.id == candidate_id),
                 'timestamp': timestamp,
                 'votes': votes
-            })
+            }
+            if (candidate is not None) and (candidate_id == candidate.id):
+                return result
+            results.append(result)
         return results
 
-    def results_total(self):
+    def results_total(self, candidate=None):
         results = []
         sql = Result.RESULTS_TOTAL_SQL % (str(self.id))
         for (candidate_id, timestamp, votes) in db.execute_sql(sql):
-            results.append({
+            result = {
                 'candidate': Candidate.get(Candidate.id == candidate_id),
                 'timestamp': timestamp,
                 'votes': votes
-            })
+            }
+            if (candidate is not None) and (candidate_id == candidate.id):
+                return result
+            results.append(result)
         return results
+
+    def candidates_by_letter(self, letter):
+        return (Candidate.select().distinct()
+                .join(ElectionCandidate)
+                .where(ElectionCandidate.election == self.id)
+                .where((Candidate.name ** ("%s%%" % letter)) & (Candidate.status == 'A')))
 
     def status_by_county(self, county):
         precincts = Precinct.select().where((Precinct.status == 'A') & (Precinct.county == county))

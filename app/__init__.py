@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, abort, redirect, url_for, render_template
 
 from app.models import *
 
@@ -32,7 +32,10 @@ def counties():
 @app.route('/news')
 def news():
     news = News.select().where(News.election == election.id).limit(10)
-    return render_template('news.html', endpoint='news', news=news, election=election)
+    return render_template('news.html',
+                           endpoint='news',
+                           news=news,
+                           election=election)
 
 
 @app.route('/about')
@@ -43,12 +46,31 @@ def about():
 @app.route('/candidates')
 @app.route('/candidates/<code>')
 def candidates(code=None):
-    return render_template('candidates.html', endpoint='candidates')
+    import string
+    letters = string.ascii_lowercase
+
+    if code is not None:
+        try:
+            candidate = Candidate.get(Candidate.code == code.upper())
+            return render_template('candidate.html',
+                                   candidate=candidate,
+                                   endpoint='candidates',
+                                   letters=letters)
+        except Candidate.DoesNotExist:
+            # TODO flash a message
+            return redirect(url_for('candidates'))
+    else:
+        candidate = None
+
+    return render_template('candidates.html',
+                           Candidate=Candidate,
+                           endpoint='candidates',
+                           letters=letters)
 
 
 @app.route('/data')
 def data():
-    return render_template('layout/web.html', endpoint='data')
+    return render_template('results/data.html', endpoint='data')
 
 
 @app.route('/admin/elections')

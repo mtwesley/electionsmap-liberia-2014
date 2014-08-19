@@ -114,10 +114,12 @@ create table candidates (
   id serial not null, 
   name d_text_short not null,
   code d_candidate_code unique not null,
+  description d_text_medium,
   biography d_text_medium,
   platform d_text_medium,
   birth_date d_date,
   phone d_phone,
+  website d_text_medium
   email d_email,
   photo_id d_id,
   d_status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive

@@ -1,0 +1,86 @@
+{% extends "layout/web.html" %}
+{% block title %}{{ candidate.name }} - {% endblock %}
+{% block content %}
+    <div id="content">
+        <img src="{{ url_for('static', filename=(candidate.photo.path or '/images/candidate_full_00.jpg')) }}" class="chart_02_box rounded" />
+        <div class="chart_02 rounded">
+            <div class="chart_02_title_01 text_d">
+                {{ candidate.name }}
+            </div>
+            {% if candidate.description %}
+            <div class="chart_02_row_01 text_d">
+                {{ candidate.description }}
+            </div>
+            {% endif %}
+            <div class="chart_02_row_01 text_d">
+                <div class="candidate_data_ITEM_partyColorBox" style="background-color:#{{ candidate.party(election).color or '555555' }};"></div>
+                <div class="text_a candidate_data_ITEM_partyName" style="color:#{{ candidate.party(election).color or '555555' }};">{{ candidate.party().name }}</div>
+            </div>
+            {% if candidate.birth_date %}
+            <div class="chart_02_row_01 text_d">
+                <strong>DOB:</strong> {{ candidate.birth_date }}
+            </div>
+            {% endif %}
+            {% if candidate.phone %}
+            <div class="chart_02_row_01 text_d">
+                <strong>Phone:</strong> {{ candidate.phone }}
+            </div>
+            {% endif %}
+            {% if candidate.website %}
+            <div class="chart_02_row_01 text_d">
+                <strong>Website:</strong> {{ candidate.website }}
+            </div>
+            {% endif %}
+            {% if candidate.email %}
+            <div class="chart_02_row_01 text_d">
+                <strong>Email:</strong> {{ candidate.email }}
+            </div>
+            {% endif %}
+            {% set result = election.results_total(candidate) %}
+            <div class="chart_02_row_02 text_b">
+                <div class="chart_01_row_02_01">
+                    {% if result %}
+                    <strong>Votes:</strong> {{ result.votes }}
+                    {% endif %}
+                </div>
+                <div class="chart_01_row_02_02">&nbsp;
+                    <!--
+                    <div class="chart_graph">
+                        <div class="chart_bar" style="width:0px;">
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <div class="chart_01_row_02_03">
+                    {% if result %}
+                        Results as of {{ result.timestamp.strftime('%d %b %Y %H:%M %p') }}
+                    {% else %}
+                        No results available
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        {% if candidate.platform %}
+        <div class="chart_03 rounded">
+            <div class="chart_03_title_01 text_d">
+                <strong>Platform</strong>
+            </div>
+            <div class="chart_03_row_01 text_d">
+                {{ candidate.platform }}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if candidate.biography %}
+        <div class="chart_03 rounded">
+            <div class="chart_03_title_01 text_d">
+                <strong>Biography</strong>
+            </div>
+            <div class="chart_03_row_01 text_d">
+                {{ candidate.biography }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
