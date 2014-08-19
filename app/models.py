@@ -3,10 +3,10 @@ import settings
 from peewee import *
 from playhouse.postgres_ext import PostgresqlExtDatabase
 
+
 db = PostgresqlExtDatabase(database=settings.DB_NAME, host=settings.DB_HOST, port=settings.DB_PORT,
                            user=settings.DB_USER, password=settings.DB_PASS,
                            threadlocals=True, autocommit=True, autorollback=True)
-
 
 class BaseModel(Model):
     class Meta:

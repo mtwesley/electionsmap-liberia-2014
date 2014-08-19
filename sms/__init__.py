@@ -1,3 +1,5 @@
+import settings
+
 from flask import Flask, request, render_template, url_for
 
 from phonenumbers import parse as parse_number, is_possible_number, is_valid_number, format_number, PhoneNumberFormat
@@ -5,7 +7,11 @@ from phonenumbers import parse as parse_number, is_possible_number, is_valid_num
 from app.models import *
 from sms.forms import *
 
+
 app = Flask(__name__, static_url_path='')
+app.config.from_object(settings)
+
+db.connect()
 
 
 @app.route('/test', methods=['GET', 'POST'])

@@ -1,9 +1,14 @@
+import settings
+
 from flask import Flask, redirect, url_for, render_template
 
 from app.models import *
 
-app = Flask(__name__, static_url_path='')
 
+app = Flask(__name__, static_url_path='')
+app.config.from_object(settings)
+
+db.connect()
 
 election = Election.get((Election.type == Election.SENATORIAL) & (Election.year == 2014))
 
