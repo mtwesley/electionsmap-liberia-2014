@@ -323,11 +323,11 @@ order by
 
 create index precincts_location on precincts (location);
 create index precincts_coordinates on precincts (longitude, latitude);
-create index precincts_status on precincts (status);
 
 create index elections_type on elections (type);
 create index elections_dates on elections (from_date, to_date);
 create unique index elections_type_year on elections (type, year);
+create index election_precinct_status on election_reporters (election_id, precinct_id, is_completed);
 
 
 -- functions
