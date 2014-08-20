@@ -767,6 +767,7 @@ insert into candidates (name,code) values ('Jemeon Alphonso Sando', 'JASAN');
 -- reporters
 
 insert into reporters (name, phone, email) values ('Mlen-Too Wesley', '+231880358139', 'mlen.too.wesley@gmail.com');
+insert into reporters (name, phone, email) values ('Lawrence Randall', '+231886400206', 'pellrandall@gmail.com');
 
 -- channels
 
@@ -777,15 +778,2106 @@ insert into channels (name, phone, status) values ('Fake', '0000', 'A');
 insert into elections (type, year, from_date, to_date) values ('S', 2014, '2014-01-01', '2014-12-31');
 insert into election_channels (election_id, channel_id) values (lookup_election_id('S', 2014), lookup_channel_id('0000'));
 
--- 3001 precinct = Bomi County
+-- Bomi County
 
 insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('3001'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('3001'));
 insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GWEAH'), lookup_precinct_id('3001'), lookup_party_id('CDC'));
 insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JNBKI'), lookup_precinct_id('3001'), lookup_party_id('UP'));
 
--- 3002 precinct = Bomi County
-
 insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('3002'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('3002'));
 insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('GWEAH'), lookup_precinct_id('3002'), lookup_party_id('CDC'));
 insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JNBKI'), lookup_precinct_id('3002'), lookup_party_id('UP'));
+
+-- Maryland
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('27073'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('27073'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('RKFLO'), lookup_precinct_id('27073'), lookup_party_id('LEP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('ADWLL'), lookup_precinct_id('27073'), lookup_party_id('LTP'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('27074'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('27074'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('RKFLO'), lookup_precinct_id('27074'), lookup_party_id('LEP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('ADWLL'), lookup_precinct_id('27074'), lookup_party_id('LTP'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('27078'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('27078'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('RKFLO'), lookup_precinct_id('27078'), lookup_party_id('LEP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('ADWLL'), lookup_precinct_id('27078'), lookup_party_id('LTP'));
+
+-- Montserrado County
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30002'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30002'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30002'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30002'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30002'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30002'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30002'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30006'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30006'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30006'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30006'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30006'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30006'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30006'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30007'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30007'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30007'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30007'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30007'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30007'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30007'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30008'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30008'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30008'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30008'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30008'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30008'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30008'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30009'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30009'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30009'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30009'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30009'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30009'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30009'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30010'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30010'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30010'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30010'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30010'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30010'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30010'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30013'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30013'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30013'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30013'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30013'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30013'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30013'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30022'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30022'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30022'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30022'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30022'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30022'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30022'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30023'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30023'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30023'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30023'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30023'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30023'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30023'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30024'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30024'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30024'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30024'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30024'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30024'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30024'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30025'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30025'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30025'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30025'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30025'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30025'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30025'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30028'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30028'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30028'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30028'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30028'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30028'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30028'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30029'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30029'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30029'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30029'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30029'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30029'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30029'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30030'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30030'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30030'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30030'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30030'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30030'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30030'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30032'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30032'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30032'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30032'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30032'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30032'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30032'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30033'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30033'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30033'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30033'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30033'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30033'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30033'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30039'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30039'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30039'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30039'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30039'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30039'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30039'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30042'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30042'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30042'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30042'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30042'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30042'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30042'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30043'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30043'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30043'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30043'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30043'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30043'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30043'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30044'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30044'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30044'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30044'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30044'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30044'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30044'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30045'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30045'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30045'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30045'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30045'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30045'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30045'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30047'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30047'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30047'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30047'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30047'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30047'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30047'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30048'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30048'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30048'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30048'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30048'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30048'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30048'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30049'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30049'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30049'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30049'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30049'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30049'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30049'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30051'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30051'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30051'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30051'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30051'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30051'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30051'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30052'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30052'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30052'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30052'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30052'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30052'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30052'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30053'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30053'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30053'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30053'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30053'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30053'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30053'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30056'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30056'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30056'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30056'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30056'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30056'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30056'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30057'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30057'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30057'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30057'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30057'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30057'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30057'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30060'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30060'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30060'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30060'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30060'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30060'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30060'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30061'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30061'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30061'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30061'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30061'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30061'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30061'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30062'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30062'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30062'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30062'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30062'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30062'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30062'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30064'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30064'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30064'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30064'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30064'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30064'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30064'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30065'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30065'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30065'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30065'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30065'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30065'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30065'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30066'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30066'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30066'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30066'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30066'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30066'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30066'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30067'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30067'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30067'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30067'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30067'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30067'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30067'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30070'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30070'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30070'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30070'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30070'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30070'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30070'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30071'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30071'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30071'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30071'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30071'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30071'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30071'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30073'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30073'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30073'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30073'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30073'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30073'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30073'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30074'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30074'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30074'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30074'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30074'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30074'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30074'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30077'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30077'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30077'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30077'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30077'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30077'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30077'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30078'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30078'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30078'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30078'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30078'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30078'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30078'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30079'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30079'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30079'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30079'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30079'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30079'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30079'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30080'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30080'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30080'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30080'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30080'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30080'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30080'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30081'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30081'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30081'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30081'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30081'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30081'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30081'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30082'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30082'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30082'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30082'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30082'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30082'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30082'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30083'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30083'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30083'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30083'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30083'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30083'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30083'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30084'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30084'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30084'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30084'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30084'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30084'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30084'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30085'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30085'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30085'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30085'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30085'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30085'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30085'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30086'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30086'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30086'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30086'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30086'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30086'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30086'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30087'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30087'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30087'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30087'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30087'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30087'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30087'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30089'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30089'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30089'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30089'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30089'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30089'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30089'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30090'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30090'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30090'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30090'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30090'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30090'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30090'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30091'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30091'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30091'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30091'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30091'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30091'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30091'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30092'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30092'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30092'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30092'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30092'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30092'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30092'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30093'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30093'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30093'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30093'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30093'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30093'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30093'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30094'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30094'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30094'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30094'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30094'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30094'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30094'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30095'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30095'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30095'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30095'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30095'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30095'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30095'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30096'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30096'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30096'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30096'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30096'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30096'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30096'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30097'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30097'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30097'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30097'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30097'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30097'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30097'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30098'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30098'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30098'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30098'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30098'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30098'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30098'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30100'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30100'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30100'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30100'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30100'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30100'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30100'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30106'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30106'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30106'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30106'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30106'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30106'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30106'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30107'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30107'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30107'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30107'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30107'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30107'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30107'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30110'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30110'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30110'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30110'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30110'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30110'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30110'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30117'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30117'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30117'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30117'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30117'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30117'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30117'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30121'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30121'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30121'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30121'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30121'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30121'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30121'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30125'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30125'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30125'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30125'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30125'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30125'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30125'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30126'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30126'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30126'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30126'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30126'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30126'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30126'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30127'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30127'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30127'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30127'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30127'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30127'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30127'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30128'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30128'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30128'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30128'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30128'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30128'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30128'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30130'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30130'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30130'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30130'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30130'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30130'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30130'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30131'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30131'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30131'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30131'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30131'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30131'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30131'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30133'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30133'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30133'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30133'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30133'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30133'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30133'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30134'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30134'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30134'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30134'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30134'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30134'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30134'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30139'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30139'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30139'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30139'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30139'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30139'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30139'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30142'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30142'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30142'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30142'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30142'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30142'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30142'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30144'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30144'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30144'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30144'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30144'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30144'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30144'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30146'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30146'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30146'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30146'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30146'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30146'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30146'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30152'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30152'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30152'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30152'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30152'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30152'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30152'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30153'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30153'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30153'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30153'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30153'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30153'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30153'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30154'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30154'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30154'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30154'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30154'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30154'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30154'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30155'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30155'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30155'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30155'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30155'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30155'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30155'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30156'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30156'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30156'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30156'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30156'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30156'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30156'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30157'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30157'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30157'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30157'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30157'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30157'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30157'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30158'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30158'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30158'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30158'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30158'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30158'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30158'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30160'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30160'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30160'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30160'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30160'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30160'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30160'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30164'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30164'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30164'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30164'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30164'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30164'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30164'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30165'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30165'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30165'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30165'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30165'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30165'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30165'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30167'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30167'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30167'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30167'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30167'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30167'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30167'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30168'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30168'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30168'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30168'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30168'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30168'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30168'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30169'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30169'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30169'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30169'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30169'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30169'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30169'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30171'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30171'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30171'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30171'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30171'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30171'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30171'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30173'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30173'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30173'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30173'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30173'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30173'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30173'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30174'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30174'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30174'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30174'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30174'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30174'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30174'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30178'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30178'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30178'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30178'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30178'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30178'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30178'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30185'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30185'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30185'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30185'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30185'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30185'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30185'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30186'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30186'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30186'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30186'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30186'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30186'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30186'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30192'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30192'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30192'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30192'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30192'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30192'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30192'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30193'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30193'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30193'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30193'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30193'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30193'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30193'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30194'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30194'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30194'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30194'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30194'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30194'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30194'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30198'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30198'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30198'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30198'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30198'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30198'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30198'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30199'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30199'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30199'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30199'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30199'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30199'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30199'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30201'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30201'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30201'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30201'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30201'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30201'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30201'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30204'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30204'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30204'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30204'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30204'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30204'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30204'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30208'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30208'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30208'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30208'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30208'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30208'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30208'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30211'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30211'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30211'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30211'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30211'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30211'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30211'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30214'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30214'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30214'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30214'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30214'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30214'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30214'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30217'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30217'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30217'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30217'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30217'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30217'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30217'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30218'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30218'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30218'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30218'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30218'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30218'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30218'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30219'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30219'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30219'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30219'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30219'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30219'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30219'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30220'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30220'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30220'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30220'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30220'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30220'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30220'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30221'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30221'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30221'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30221'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30221'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30221'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30221'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30222'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30222'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30222'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30222'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30222'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30222'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30222'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30223'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30223'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30223'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30223'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30223'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30223'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30223'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30224'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30224'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30224'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30224'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30224'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30224'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30224'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30225'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30225'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30225'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30225'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30225'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30225'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30225'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30227'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30227'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30227'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30227'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30227'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30227'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30227'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30228'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30228'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30228'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30228'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30228'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30228'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30228'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30229'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30229'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30229'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30229'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30229'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30229'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30229'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30230'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30230'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30230'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30230'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30230'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30230'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30230'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30231'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30231'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30231'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30231'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30231'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30231'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30231'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30232'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30232'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30232'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30232'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30232'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30232'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30232'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30233'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30233'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30233'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30233'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30233'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30233'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30233'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30234'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30234'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30234'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30234'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30234'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30234'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30234'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30235'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30235'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30235'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30235'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30235'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30235'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30235'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30236'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30236'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30236'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30236'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30236'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30236'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30236'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30237'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30237'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30237'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30237'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30237'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30237'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30237'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30240'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30240'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30240'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30240'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30240'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30240'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30240'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30241'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30241'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30241'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30241'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30241'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30241'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30241'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30242'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30242'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30242'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30242'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30242'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30242'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30242'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30243'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30243'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30243'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30243'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30243'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30243'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30243'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30244'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30244'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30244'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30244'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30244'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30244'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30244'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30245'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30245'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30245'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30245'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30245'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30245'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30245'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30246'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30246'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30246'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30246'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30246'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30246'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30246'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30247'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30247'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30247'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30247'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30247'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30247'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30247'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30248'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30248'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30248'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30248'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30248'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30248'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30248'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30251'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30251'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30251'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30251'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30251'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30251'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30251'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30252'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30252'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30252'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30252'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30252'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30252'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30252'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30254'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30254'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30254'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30254'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30254'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30254'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30254'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30255'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30255'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30255'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30255'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30255'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30255'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30255'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30257'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30257'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30257'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30257'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30257'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30257'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30257'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30260'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30260'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30260'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30260'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30260'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30260'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30260'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30262'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30262'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30262'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30262'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30262'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30262'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30262'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30263'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30263'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30263'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30263'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30263'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30263'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30263'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30265'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30265'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30265'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30265'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30265'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30265'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30265'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30266'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30266'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30266'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30266'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30266'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30266'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30266'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30267'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30267'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30267'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30267'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30267'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30267'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30267'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30269'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30269'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30269'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30269'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30269'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30269'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30269'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30271'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30271'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30271'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30271'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30271'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30271'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30271'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30272'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30272'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30272'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30272'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30272'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30272'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30272'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30273'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30273'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30273'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30273'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30273'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30273'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30273'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30274'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30274'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30274'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30274'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30274'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30274'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30274'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30276'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30276'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30276'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30276'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30276'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30276'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30276'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30277'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30277'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30277'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30277'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30277'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30277'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30277'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30278'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30278'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30278'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30278'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30278'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30278'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30278'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30279'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30279'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30279'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30279'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30279'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30279'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30279'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30280'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30280'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30280'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30280'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30280'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30280'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30280'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30283'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30283'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30283'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30283'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30283'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30283'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30283'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30284'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30284'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30284'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30284'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30284'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30284'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30284'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30285'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30285'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30285'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30285'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30285'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30285'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30285'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30286'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30286'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30286'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30286'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30286'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30286'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30286'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30287'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30287'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30287'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30287'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30287'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30287'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30287'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30288'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30288'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30288'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30288'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30288'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30288'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30288'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30289'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30289'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30289'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30289'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30289'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30289'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30289'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30292'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30292'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30292'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30292'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30292'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30292'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30292'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30293'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30293'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30293'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30293'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30293'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30293'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30293'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30294'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30294'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30294'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30294'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30294'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30294'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30294'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30295'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30295'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30295'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30295'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30295'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30295'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30295'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30299'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30299'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30299'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30299'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30299'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30299'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30299'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30300'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30300'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30300'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30300'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30300'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30300'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30300'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30303'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30303'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30303'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30303'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30303'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30303'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30303'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30304'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30304'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30304'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30304'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30304'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30304'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30304'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30305'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30305'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30305'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30305'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30305'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30305'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30305'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30306'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30306'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30306'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30306'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30306'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30306'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30306'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30307'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30307'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30307'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30307'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30307'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30307'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30307'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30308'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30308'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30308'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30308'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30308'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30308'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30308'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30309'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30309'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30309'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30309'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30309'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30309'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30309'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30310'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30310'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30310'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30310'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30310'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30310'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30310'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30311'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30311'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30311'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30311'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30311'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30311'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30311'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30312'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30312'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30312'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30312'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30312'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30312'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30312'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30314'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30314'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30314'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30314'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30314'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30314'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30314'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30317'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30317'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30317'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30317'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30317'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30317'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30317'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30319'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30319'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30319'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30319'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30319'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30319'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30319'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30320'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30320'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30320'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30320'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30320'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30320'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30320'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30321'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30321'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30321'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30321'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30321'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30321'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30321'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30322'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30322'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30322'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30322'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30322'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30322'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30322'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30323'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30323'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30323'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30323'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30323'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30323'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30323'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30324'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30324'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30324'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30324'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30324'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30324'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30324'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30325'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30325'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30325'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30325'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30325'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30325'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30325'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30326'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30326'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30326'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30326'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30326'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30326'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30326'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30327'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30327'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30327'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30327'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30327'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30327'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30327'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30338'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30338'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30338'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30338'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30338'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30338'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30338'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30341'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30341'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30341'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30341'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30341'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30341'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30341'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30343'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30343'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30343'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30343'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30343'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30343'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30343'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30345'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30345'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30345'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30345'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30345'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30345'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30345'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30346'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30346'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30346'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30346'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30346'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30346'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30346'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30347'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30347'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30347'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30347'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30347'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30347'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30347'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30348'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30348'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30348'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30348'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30348'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30348'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30348'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30351'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30351'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30351'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30351'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30351'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30351'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30351'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30354'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30354'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30354'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30354'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30354'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30354'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30354'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30355'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30355'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30355'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30355'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30355'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30355'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30355'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30356'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30356'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30356'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30356'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30356'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30356'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30356'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30357'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30357'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30357'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30357'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30357'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30357'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30357'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30358'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30358'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30358'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30358'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30358'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30358'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30358'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30360'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30360'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30360'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30360'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30360'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30360'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30360'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30362'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30362'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30362'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30362'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30362'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30362'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30362'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30364'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30364'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30364'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30364'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30364'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30364'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30364'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30365'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30365'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30365'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30365'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30365'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30365'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30365'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30366'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30366'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30366'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30366'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30366'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30366'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30366'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30368'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30368'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30368'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30368'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30368'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30368'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30368'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30369'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30369'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30369'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30369'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30369'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30369'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30369'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30370'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30370'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30370'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30370'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30370'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30370'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30370'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30371'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30371'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30371'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30371'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30371'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30371'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30371'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30372'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30372'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30372'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30372'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30372'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30372'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30372'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30375'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30375'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30375'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30375'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30375'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30375'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30375'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30376'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30376'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30376'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30376'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30376'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30376'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30376'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30377'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30377'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30377'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30377'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30377'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30377'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30377'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30378'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30378'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30378'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30378'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30378'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30378'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30378'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30379'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30379'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30379'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30379'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30379'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30379'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30379'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30380'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30380'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30380'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30380'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30380'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30380'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30380'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30381'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30381'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30381'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30381'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30381'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30381'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30381'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30382'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30382'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30382'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30382'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30382'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30382'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30382'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30383'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30383'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30383'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30383'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30383'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30383'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30383'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30384'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30384'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30384'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30384'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30384'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30384'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30384'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30386'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30386'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30386'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30386'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30386'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30386'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30386'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30387'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30387'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30387'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30387'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30387'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30387'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30387'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30388'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30388'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30388'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30388'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30388'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30388'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30388'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30389'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30389'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30389'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30389'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30389'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30389'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30389'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30392'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30392'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30392'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30392'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30392'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30392'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30392'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30393'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30393'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30393'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30393'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30393'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30393'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30393'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30394'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30394'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30394'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30394'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30394'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30394'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30394'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30395'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30395'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30395'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30395'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30395'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30395'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30395'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30396'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30396'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30396'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30396'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30396'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30396'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30396'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30398'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30398'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30398'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30398'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30398'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30398'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30398'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30399'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30399'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30399'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30399'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30399'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30399'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30399'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30400'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30400'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30400'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30400'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30400'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30400'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30400'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30401'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30401'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30401'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30401'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30401'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30401'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30401'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30403'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30403'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30403'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30403'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30403'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30403'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30403'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30405'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30405'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30405'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30405'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30405'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30405'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30405'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30406'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30406'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30406'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30406'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30406'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30406'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30406'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30407'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30407'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30407'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30407'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30407'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30407'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30407'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30408'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30408'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30408'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30408'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30408'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30408'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30408'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30409'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30409'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30409'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30409'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30409'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30409'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30409'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30410'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30410'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30410'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30410'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30410'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30410'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30410'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30411'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30411'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30411'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30411'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30411'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30411'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30411'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30412'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30412'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30412'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30412'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30412'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30412'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30412'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30413'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30413'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30413'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30413'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30413'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30413'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30413'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30414'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30414'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30414'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30414'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30414'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30414'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30414'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30415'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30415'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30415'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30415'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30415'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30415'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30415'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30417'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30417'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30417'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30417'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30417'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30417'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30417'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30418'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30418'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30418'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30418'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30418'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30418'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30418'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30421'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30421'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30421'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30421'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30421'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30421'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30421'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30422'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30422'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30422'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30422'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30422'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30422'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30422'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30425'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30425'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30425'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30425'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30425'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30425'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30425'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30426'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30426'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30426'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30426'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30426'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30426'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30426'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30427'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30427'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30427'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30427'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30427'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30427'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30427'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30430'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30430'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30430'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30430'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30430'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30430'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30430'), lookup_party_id('ULD'));
+
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231880358139'), lookup_precinct_id('30431'));
+insert into election_reporters (election_id, reporter_id, precinct_id) values (lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), lookup_precinct_id('30431'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JRMSH'), lookup_precinct_id('30431'), lookup_party_id('FAPL'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('CCROM'), lookup_precinct_id('30431'), lookup_party_id('MPC'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('FOSIA'), lookup_precinct_id('30431'), lookup_party_id('LP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JLSUP'), lookup_precinct_id('30431'), lookup_party_id('NUDP'));
+insert into election_candidates (election_id, candidate_id, precinct_id, party_id) values (lookup_election_id('S', 2014), lookup_candidate_id('JASAN'), lookup_precinct_id('30431'), lookup_party_id('ULD'));
 

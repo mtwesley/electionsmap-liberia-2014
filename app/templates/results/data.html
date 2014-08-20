@@ -2,12 +2,49 @@
 {% block title %}News - {% endblock %}
 {% block content %}
     <div id="content">
+        <form>
+            <div>
+                First name:
+                <input type="text" name="firstname" placeholder="First Name">
+                <br><br>
+                Last name:
+                <input type="text" name="lastname" placeholder="Last name">
+            </div>
+            <br>
+            <div>
+                <input checked type="radio" name="sex" id="male" >
+                <label for="male">Male</label>
+                <input type="radio" name="sex" id="female" >
+                <label for="female">Female</label>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="SAL" value="SAL" id="SAL">
+                <label for="SAL"> Salad</label>
+                <input type="checkbox" name="CMB" value="CMB" id="CMB">
+                <label for="CMB"> Combo Deals</label>
+                <input type="checkbox" name="DST" value="DST" id="DST">
+                <label for="DST"> Dessert</label>
+            </div>
+            <br>
+            <select name="location" >
+                <option value="" style="display:none">Location</option>
+                <option value="Congotown">Congotown</option>
+                <option value="Downtown Monrovia">Downtown Monrovia</option>
+                <option value="Mamba Point">Mamba Point</option>
+                <option value="Sinkor">Sinkor</option>
+            </select>
+            <br><br>
+            <textarea placeholder="feed me"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
         <table class="rounded">
             <thead>
                 <tr>
-                    <th>This is a test header</td>
-                    <th>This is a test header</td>
-                    <th>This is a test header</td>
+                    <th>Header</td>
+                    <th>Header Two</td>
+                    <th>Header Three</td>
                 </tr>
             </thead>
             <tr>

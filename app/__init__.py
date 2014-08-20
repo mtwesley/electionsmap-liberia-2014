@@ -2,6 +2,7 @@ import settings
 
 from flask import Flask, redirect, url_for, render_template
 
+from app.auth import *
 from app.models import *
 
 
@@ -79,11 +80,13 @@ def data():
 
 
 @app.route('/admin/elections')
+@requires_auth
 def admin_elections():
     return render_template('admin/elections.html', elections=Election.select())
 
 
 @app.route('/admin/candidates')
+@requires_auth
 def admin_candidates():
     return render_template('admin/candidates.html', candidates=Candidate.select())
 

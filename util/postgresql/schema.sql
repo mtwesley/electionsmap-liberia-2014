@@ -103,6 +103,7 @@ create table parties (
   color d_color,
   description d_text_medium,
   photo_id d_id,
+  status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
   timestamp d_timestamp default current_timestamp not null,
 
   constraint parties_pkey primary key (id),

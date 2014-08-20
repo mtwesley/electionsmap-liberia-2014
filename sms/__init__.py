@@ -4,6 +4,7 @@ from flask import Flask, request, render_template, url_for
 
 from phonenumbers import parse as parse_number, is_possible_number, is_valid_number, format_number, PhoneNumberFormat
 
+from app.auth import *
 from app.models import *
 from sms.forms import *
 
@@ -13,8 +14,8 @@ app.config.from_object(settings)
 
 db.connect()
 
-
 @app.route('/test', methods=['GET', 'POST'])
+@requires_auth
 def test():
     form = TestForm()
     response = None
