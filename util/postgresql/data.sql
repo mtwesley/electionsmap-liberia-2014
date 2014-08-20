@@ -35,6 +35,18 @@ insert into parties (name,code) values ('Union of Liberian Democrats', 'ULD');
 insert into parties (name,code) values ('Unity Party', 'UP');
 insert into parties (name,code) values ('Victory for Change Party', 'VCP');
 
+update parties set color = 'FB4226' where code = 'FAPL';
+update parties set color = 'C720D0' where code = 'LEP';
+update parties set color = 'FBDE26' where code = 'MPC';
+update parties set color = '2046D0' where code = 'NUDP';
+update parties set color = 'FF4388' where code = 'ULD';
+update parties set color = 'F28E1E' where code = 'LP';
+update parties set color = '29A6DD' where code = 'CDC';
+update parties set color = 'BD282E' where code = 'NRP';
+update parties set color = 'EB5A23' where code = 'NPL';
+update parties set color = '2D318C' where code = 'ALCOP';
+update parties set color = '2D318C' where code = 'LTP';
+update parties set color = '008D45' where code = 'UP';
 
 -- counties
 

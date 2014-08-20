@@ -49,7 +49,7 @@
                     <div class="chart_01_row_01_03">
                         <div class="chart_graph">
                             <div class="chart_bar"
-                                 style="width:48px; background-color:#{{ color }};">
+                                 style="width:{{ (100 * r.votes / votes)|int }}px; background-color:#{{ color }};">
                             </div>
                         </div>
                     </div>
