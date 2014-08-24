@@ -204,7 +204,9 @@ class Election(BaseModel):
             if (candidate is not None) and (candidate_id == candidate.id):
                 return result
             results.append(result)
-        return results
+        if candidate is None:
+            return results
+        return None
 
     def results_by_county(self, county, candidate=None):
         results = []
@@ -218,7 +220,9 @@ class Election(BaseModel):
             if (candidate is not None) and (candidate_id == candidate.id):
                 return result
             results.append(result)
-        return results
+        if candidate is None:
+            return results
+        return None
 
     def results_total(self, candidate=None):
         results = []
@@ -232,7 +236,9 @@ class Election(BaseModel):
             if (candidate is not None) and (candidate_id == candidate.id):
                 return result
             results.append(result)
-        return results
+        if candidate is None:
+            return results
+        return None
 
     def candidates_by_letter(self, letter):
         return (Candidate.select().distinct()
