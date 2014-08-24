@@ -15,7 +15,8 @@ election = Election.get((Election.type == Election.SENATORIAL) & (Election.year 
 
 @app.context_processor
 def election_preprocess():
-    return dict(election=election)
+    news = News.select().where(News.election == election.id).limit(10)
+    return dict(election=election, news=news)
 
 @app.route('/')
 def overview():
@@ -26,8 +27,12 @@ def overview():
 
 
 @app.route('/counties')
-def counties():
+@app.route('/counties/<code>')
+def counties(code=None):
     counties = County.select()
+    if code is not None:
+        counties = counties.where(County.long_code == code.upper())
+
     total_precincts = Precinct.select(Precinct.id).where(Precinct.status == 'A').count()
     return render_template('results/counties.html',
                            endpoint='counties',
@@ -37,10 +42,8 @@ def counties():
 
 @app.route('/news')
 def news():
-    news = News.select().where(News.election == election.id).limit(10)
     return render_template('news.html',
                            endpoint='news',
-                           news=news,
                            election=election)
 
 

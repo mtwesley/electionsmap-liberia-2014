@@ -7,10 +7,12 @@
                 {% set results = election.results_by_county(c) %}
                 {% set votes = election.votes_by_county(c) %}
 
+                <a href="{{ url_for('counties', code=c.long_code.lower()) }}">
                 <div class="chart_01_box text_d">
                     <div class="chart_01_box_title">{{ c.name }} County</div>
                     {%  include 'svg/' + c.long_code|string + '.svg' %}
                 </div>
+                </a>
                 <div class="chart_01_title text_d">
                     <div class="chart_01_title_01">
                         Party
@@ -25,7 +27,7 @@
                         Percentage
                     </div>
                     <div class="chart_01_title_05">
-                        <a href="" class="view_more">View More</a>
+                        <a href="{{ url_for('counties', code=c.long_code.lower()) }}" class="view_more">View More</a>
                     </div>
                 </div>
 

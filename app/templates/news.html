@@ -5,7 +5,7 @@
     {% for n in news %}
         <div class="news_row_01">
             <div class="news_pic">
-                <img class="item-pic rounded-panel" src="{{ url_for('static', filename=(n.reporter.photo.path or 'images/news_thumb_00.jpg')) }}">
+                <img src="{{ url_for('static', filename=(n.reporter.photo.path or 'images/news_thumb_00.jpg')) }}">
             </div>
             <div class="news_bubble rounded">
                 <div class="news_text text_d">

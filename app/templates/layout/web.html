@@ -16,6 +16,9 @@
         {% endblock %}
 
         {%  block scripts %}
+            <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.cycle.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.powertip.js') }}"></script>
             <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
         {% endblock %}
 

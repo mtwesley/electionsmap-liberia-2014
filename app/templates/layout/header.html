@@ -2,13 +2,19 @@
     <a href="{{ url_for('overview') }}">
         <div id="logo"></div>
     </a>
-    <div id="flash">
-        <div id="flash_pic"><img src="/images/news_thumb_00.jpg" /></div>
-        <div id="flash_text" class="text_b">
-            "Results are coming in from Precinct 12, looks like we have a new Senator."
-        </div>
-        <div id="flash_name" class="text_b">
-            ~ Mlen-Too Wesley
-        </div>
+    <div id="flash-slideshow">
+        {% for n in news %}
+            <div class="flash_box">
+                <div class="flash_pic">
+                    <img class="item-pic rounded-panel" src="{{ url_for('static', filename=(n.reporter.photo.path or 'images/news_thumb_00.jpg')) }}">
+                </div>
+                <div class="flash_text" class="text_b">
+                    "{{ n.truncate(80) }}"
+                </div>
+                <div class="flash_name" class="text_b">
+                    ~ {{ n.reporter.name }}
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>

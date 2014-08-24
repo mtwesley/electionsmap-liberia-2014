@@ -14,7 +14,7 @@
             {% endif %}
             <div class="chart_02_row_01 text_d">
                 <div class="candidate_data_ITEM_partyColorBox" style="background-color:#{{ candidate.party(election).color or '555555' }};"></div>
-                <div class="text_a candidate_data_ITEM_partyName" style="color:#{{ candidate.party(election).color or '555555' }};">{{ candidate.party().name }}</div>
+                <div class="text_a candidate_data_ITEM_partyName" style="color:#{{ candidate.party(election).color or '555555' }};">{{ candidate.party(election).name }}</div>
             </div>
             {% if candidate.birth_date %}
             <div class="chart_02_row_01 text_d">

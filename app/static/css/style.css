@@ -178,6 +178,27 @@ td {
 	border: 1px solid #BAB5B5;
 }
 
+.powertip {
+    position: absolute;
+    display: none;
+}
+
+#county-results-powertip {
+    padding: 5px;
+    position: absolute;
+    display: none;
+    z-index: 20000000;
+    background: #FFFFFF;
+    border: 1px solid #8D8D8D;
+    font-size: 13px;
+}
+
+#county-results-powertip img {
+    height: 45px;
+    margin-right: 10px;
+    float: left;
+}
+
 .rounded{
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
@@ -322,6 +343,7 @@ td {
 	height:100px;
 	margin:0px;
 	padding:0px;
+    position: relative;
 }
 
 #logo{
@@ -333,7 +355,12 @@ td {
 	background: url('/images/logo.png') no-repeat 0 0;
 }
 
-#flash{
+#flash-slideshow {
+    position: absolute;
+    right: 8px;
+}
+
+.flash_box{
 	float:left;
 	width:380px;
 	height:65px;
@@ -342,7 +369,7 @@ td {
 	background: url('/images/flash.png') no-repeat 0 0;
 }
 
-#flash_pic{
+.flash_pic{
 	float:left;
 	width:55px;
 	height:55px;
@@ -351,14 +378,14 @@ td {
 	background: url('/images/news_tumb_00.jpg') no-repeat 0 0;
 }
 
-#flash_text{
+.flash_text{
 	float:left;
 	width:224px;
 	height:25px;
 	margin: 0px 0px 0px 15px;
 	padding:8px;
 }
-#flash_name{
+.flash_name{
 	float:left;
 	width:224px;
 	height:15px;
@@ -469,6 +496,14 @@ td {
 	text-align:right;
 	font-weight:bold;
 }
+.overview_data_ITEM_county a,
+.overview_data_ITEM_county a:visited {
+    color: #464646;
+    text-decoration: none;
+}
+.overview_data_ITEM_county a:hover {
+    text-decoration: underline;
+}
 
 .overview_data_ITEM_partyColor{
 	float:left;
@@ -539,6 +574,8 @@ a.view_more:hover {
 	margin: 0px 0px 10px 0px;
 	padding:0px;
 	border: 1px solid #BAB5B5;
+    font-size: 22px;
+    text-align: center;
 }
 .chart_01_box{
     position: relative;
@@ -553,6 +590,11 @@ a.view_more:hover {
 	-moz-border-radius-bottomleft: 5px;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
+}
+a .chart_01_box_title,
+a:visited .chart_01_box_title,
+a:hover .chart_01_box_title{
+    color: #464646;
 }
 .chart_01_box_title{
     position: absolute;

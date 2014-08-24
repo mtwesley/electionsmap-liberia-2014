@@ -9,7 +9,7 @@
                 {% set votes = election.votes_by_county(c) %}
                 <div class="overview_data_ITEM">
                     <div class="text_a overview_data_ITEM_county">
-                        {{ c.name }}
+                        <a href="{{ url_for('counties', code=c.long_code.lower()) }}">{{ c.name }}</a>
                     </div>
                     <div class="overview_data_ITEM_partyColor">
                         <div class="overview_data_ITEM_partyColorBox"
@@ -21,8 +21,8 @@
                         </div>
                     </div>
                     <div class="text_a overview_data_ITEM_partyName"
-                         style="color: {% if result and result.candidate.party().color %}
-                                 {{ '#' + result.candidate.party().color }}
+                         style="color: {% if result and result.candidate.party(election).color %}
+                                 {{ '#' + result.candidate.party(election).color }}
                              {% else %}
                                  #555555
                              {% endif %};">
@@ -41,10 +41,19 @@
                     </div>
                     <div class="text_a overview_data_ITEM_candidate">
                         {% if result %}
-                            {{ result.candidate.name }}
+                            <a href="{{ url_for('candidates', code=result.candidate.code.lower()) }}" class="view_candidate">
+                                {{ result.candidate.name }}
+                            </a>
                         {% endif %}
                     </div>
                 </div>
+                {% if result %}
+                    <div class="powertip" id="{{ c.long_code.lower() }}-county">
+                        <img src="{{ url_for('static', filename=(result.candidate.photo.path or 'images/news_thumb_00.jpg')) }}">
+                        {{ result.candidate.name }} - {{ (100 * result.votes / votes)|int }}%<br>
+                        <span style="color: #{{ result.candidate.party(election).color or '555555' }}">{{ result.candidate.party(election).name }}</span>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

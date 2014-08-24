@@ -497,3 +497,5 @@ class News(BaseModel):
     text = TextField()
     timestamp = DateTimeField()
 
+    def truncate(self, length, suffix='...'):
+        return self.text if len(self.text) <= length else ' '.join(self.text[:length+1].split(' ')[0:-1]) + suffix
