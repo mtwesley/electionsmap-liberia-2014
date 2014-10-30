@@ -36,11 +36,13 @@ create domain d_timestamp as timestamp;
 
 create domain d_ip_address as inet;
 
+create domain d_sex as character(1) check (value ~ E'^[MF]$');
+
 create domain d_color as character(6) check (value ~ E'^[0-9ABCDEF]{6}$');
 
 create domain d_status as character(1) check (value ~ E'^[PARD]$');
 
-create domain d_phone as character varying(13) check (value ~ E'^(\\+233(88|77|55)[0-9]{4,6})|([0-9]{4})$');
+create domain d_phone as character varying(13) check (value ~ E'^(\\+233(88|77|55)[0-9]{4,6})|([0-9]{4})|(\\+(1|44)[0-9]{10})$');
 
 create domain d_email as character varying(100) check (value ~ E'^[-a-zA-Z0-9_.+]+@[-a-zA-Z0-9]+\.[-a-zA-Z0-9.]+$');
 
@@ -116,6 +118,7 @@ create table candidates (
   name d_text_short not null,
   code d_candidate_code unique not null,
   description d_text_medium,
+  sex d_sex,
   biography d_text_medium,
   platform d_text_medium,
   birth_date d_date,

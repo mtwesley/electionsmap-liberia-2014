@@ -2,6 +2,8 @@ import settings
 
 from flask import Flask, request, render_template, url_for
 
+from datetime import datetime
+
 from phonenumbers import parse as parse_number, is_possible_number, is_valid_number, format_number, PhoneNumberFormat
 
 from app.auth import *
@@ -29,10 +31,25 @@ def test():
     return render_template('test.html', form=form, response=response)
 
 
+@app.route('/nexmo')
+def nexmo():
+    from_phone = request.args.get('msisdn', None)
+    if from_phone is not None:
+        from_phone = '+' + from_phone
+
+    to_phone = request.args.get('to', None)
+    if to_phone is not None:
+        to_phone = '+' + to_phone
+
+    text = request.args.get('text', None)
+    timestamp = request.args.get('message-timestamp', None)
+
+    return sms(from_phone, to_phone, text, timestamp)
+
+
 @app.route('/sms')
 def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
     import re
-    from datetime import datetime
 
     # Possible syntax
     news_syntax = re.compile('^(NEWS|NEW)\s+(.+)', re.IGNORECASE)
@@ -70,7 +87,7 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
     if timestamp is None:
         timestamp = datetime.now()
     else:
-        timestamp = datetime.strptime(timestamp, '%Y-%m-%d %H:%M')
+        timestamp = datetime.strptime(timestamp[:16], '%Y-%m-%d %H:%M')
 
     channel = None
     reporter = None
