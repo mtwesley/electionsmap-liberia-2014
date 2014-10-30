@@ -63,10 +63,17 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
         'error': []
     }
 
-    from_phone = request.args.get('from', from_phone)
-    to_phone = request.args.get('to', to_phone)
-    text = request.args.get('text', text)
-    timestamp = request.args.get('timestamp', timestamp)
+    if from_phone is None:
+        from_phone = request.args.get('from', from_phone)
+
+    if to_phone is None:
+        to_phone = request.args.get('to', to_phone)
+
+    if text is None:
+        text = request.args.get('text', text)
+
+    if timestamp is None:
+        timestamp = request.args.get('timestamp', timestamp)
 
     # Test originating number
     if from_phone is None:
