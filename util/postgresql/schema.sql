@@ -392,13 +392,7 @@ $$
     end if;
     return x_id;
   end
-$$
-
-
-
-
-
-  plpgsql;
+$$ language plpgsql;
 
 
 create function lookup_precinct_id(x_code d_precinct_code)
