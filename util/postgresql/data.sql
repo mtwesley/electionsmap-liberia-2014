@@ -35,6 +35,10 @@ insert into parties (name,code) values ('Union of Liberian Democrats', 'ULD');
 insert into parties (name,code) values ('Unity Party', 'UP');
 insert into parties (name,code) values ('Victory for Change Party', 'VCP');
 insert into parties (name,code) values ('Independent Candidate', 'IND');
+insert into parties (name,code) values ('Alternative National Congress', 'ANC');
+insert into parties (name,code) values ('National Patriotic Party', 'NPP');
+insert into parties (name,code) values ('Liberian National Union', 'LINU');
+insert into parties (name,code) values ('People''s Unification Party', 'PUP');
 
 update parties set color = 'FB4226' where code = 'FAPL';
 update parties set color = 'C720D0' where code = 'LEP';
