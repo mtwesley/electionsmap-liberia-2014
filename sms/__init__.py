@@ -53,8 +53,8 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
 
     # Possible syntax
     news_syntax = re.compile('^(NEWS|NEW)\s+(.+)', re.IGNORECASE)
-    completed_syntax = re.compile('^([0-9]{4,6})\s+(DONE|COMPLETE|FINISH(ED)?)', re.IGNORECASE)
-    results_syntax = re.compile('^([0-9]{4,6})\s+(([A-Z]{2,7})\s+([0-9]+))+', re.IGNORECASE)
+    completed_syntax = re.compile('^((RESULTS|RESULT)\s+)?([0-9]{4,6})\s+(DONE|COMPLETE|FINISH(ED)?)', re.IGNORECASE)
+    results_syntax = re.compile('^((RESULTS|RESULT)\s+)?([0-9]{4,6})\s+(([A-Z]{2,7})\s+([0-9]+))+', re.IGNORECASE)
     candidates_votes_syntax = re.compile('([A-Z]{2,7})\s+([0-9]+)', re.IGNORECASE)
 
     response = {
@@ -145,8 +145,13 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
             message.status = Message.ACCEPTED
             message.save(force_insert=True)
             try:
-                ElectionReporter.update(is_completed=True).where(
-                    (ElectionReporter.election == election) & (ElectionReporter.reporter == reporter)).execute()
+                pct = results_matches.group(3)
+                (ElectionReporter.update(is_completed=True)
+                 .join(Precinct, on=(ElectionReporter.precinct == Precinct.id))
+                 .where(
+                    (ElectionReporter.election == election) &
+                    (Precinct.code == pct.upper()) &
+                    (ElectionReporter.reporter == reporter))).execute()
             except Exception:
                 return 'Message accepted with errors. Unable to mark precinct results as completed.'
 
@@ -157,7 +162,7 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
 
             candidates_votes_matches = re.findall(candidates_votes_syntax, text)
             try:
-                pct = results_matches.group(1)
+                pct = results_matches.group(3)
                 precinct = (Precinct.select().distinct()
                             .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
                             .where((Precinct.code == pct.upper()) & (Precinct.status == 'A'))
