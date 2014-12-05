@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#flash-slideshow').cycle({
         fx: 'fade'
     });
-    $(".county").powerTip({
+    $(".district").powerTip({
         followMouse: true,
         offset: -65,
         fadeInTime: 100,

@@ -7,9 +7,9 @@
                 {% set results = election.results_by_district(d) %}
                 {% set votes = election.votes_by_district(d) %}
 
-                <a href="{{ url_for('districts', code=d.number) }}">
+                <a href="{{ url_for('districts', number=d.number) }}">
                 <div class="chart_01_box text_d">
-                    <div class="chart_01_box_title">{{ d.name }} County</div>
+                    <div class="chart_01_box_title">District {{ d.number }}</div>
                     {%  include 'svg/districts/' + d.county.long_code.upper() + '/' + d.number|string + '.svg' %}
                 </div>
                 </a>
@@ -27,35 +27,37 @@
                         Percentage
                     </div>
                     <div class="chart_01_title_05">
-                        <a href="{{ url_for('districts', code=d.number) }}" class="view_more">View More</a>
+                        <a href="{{ url_for('districts', number=d.number) }}" class="view_more">View More</a>
                     </div>
                 </div>
 
-                {% for r in results if loop.index <= 3 %}
-                {% set color = r.candidate.party(election).color or '555555' %}
-                <div class="chart_01_row_01 text_d">
-                    <div class="chart_01_row_01_01" style="color:#{{ color }};">
-                        {{ r.candidate.party(election).code }}
-                    </div>
-                    <div class="chart_01_row_01_05">
-                        <a href="{{ url_for('candidates', code=r.candidate.code.lower()) }}" class="view_candidate">
-                            {{ r.candidate.name }}
-                        </a>
-                    </div>
-                    <div class="chart_01_row_01_04">
-                        {{ r.votes }}
-                    </div>
-                    <div class="chart_01_row_01_02">
-                        {{ (100 * r.votes / votes)|int }}%
-                    </div>
-                    <div class="chart_01_row_01_03">
-                        <div class="chart_graph">
-                            <div class="chart_bar"
-                                 style="width:{{ (100 * r.votes / votes)|int }}px; background-color:#{{ color }};">
+                {% for r in results %}
+                    {% if loop.index <= 3 %}
+                        {% set color = r.candidate.party(election).color or '555555' %}
+                        <div class="chart_01_row_01 text_d">
+                            <div class="chart_01_row_01_01" style="color:#{{ color }};">
+                                {{ r.candidate.party(election).code }}
+                            </div>
+                            <div class="chart_01_row_01_05">
+                                <a href="{{ url_for('candidates', code=r.candidate.code.lower()) }}" class="view_candidate">
+                                    {{ r.candidate.name }}
+                                </a>
+                            </div>
+                            <div class="chart_01_row_01_04">
+                                {{ r.votes }}
+                            </div>
+                            <div class="chart_01_row_01_02">
+                                {{ (100 * r.votes / votes)|int }}%
+                            </div>
+                            <div class="chart_01_row_01_03">
+                                <div class="chart_graph">
+                                    <div class="chart_bar"
+                                         style="width:{{ (100 * r.votes / votes)|int }}px; background-color:#{{ color }};">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    {% endif %}
                 {% endfor %}
                 {% if (results|length - 3) < 0 %}
                     {% set blanks = 3 - results|length %}
