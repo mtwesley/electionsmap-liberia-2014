@@ -2,14 +2,14 @@
 {% block title %}{% endblock %}
 {% block content %}
     <div id="content">
-        <div id="overview_map" class="rounded">{% include 'svg/LR.svg' %}</div>
+        <div id="overview_map" class="rounded">{% include 'svg/counties/MONT.svg' %}</div>
         <div id="overview_data" class="rounded">
-            {% for c in counties %}
-                {% set result = election.results_by_county(c)[0] %}
-                {% set votes = election.votes_by_county(c) %}
+            {% for d in districts %}
+                {% set result = election.results_by_district(d)[0] %}
+                {% set votes = election.votes_by_district(d) %}
                 <div class="overview_data_ITEM">
                     <div class="text_a overview_data_ITEM_county">
-                        <a href="{{ url_for('counties', code=c.long_code.lower()) }}">{{ c.name }}</a>
+                        <a href="{{ url_for('districts', number=d.number) }}">{{ d.number }}</a>
                     </div>
                     <div class="overview_data_ITEM_partyColor">
                         <div class="overview_data_ITEM_partyColorBox"
@@ -44,11 +44,15 @@
                             <a href="{{ url_for('candidates', code=result.candidate.code.lower()) }}" class="view_candidate">
                                 {{ result.candidate.name }}
                             </a>
+                        {% else %}
+                            <a href="#" class="view_candidate">
+                                &nbsp;&nbsp;
+                            </a>
                         {% endif %}
                     </div>
                 </div>
                 {% if result %}
-                    <div class="powertip" id="{{ c.long_code.lower() }}-county">
+                    <div class="powertip" id="district-{{ d.number }}">
                         <img src="{{ url_for('static', filename=(result.candidate.photo.path or 'images/news_thumb_00.jpg')) }}">
                         {{ result.candidate.name }} - {{ (100 * result.votes / votes)|int }}%<br>
                         <span style="color: #{{ result.candidate.party(election).color or '555555' }}">{{ result.candidate.party(election).name }}</span>

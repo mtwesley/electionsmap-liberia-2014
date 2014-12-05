@@ -21,9 +21,11 @@ def election_preprocess():
 @app.route('/')
 def overview():
     counties = County.select()
+    districts = District.select()
     return render_template('results/overview.html',
                            endpoint='overview',
-                           counties=counties)
+                           counties=counties,
+                           districts=districts)
 
 
 @app.route('/counties')
@@ -38,6 +40,20 @@ def counties(code=None):
                            endpoint='counties',
                            total_precincts=total_precincts,
                            counties=counties)
+
+
+@app.route('/districts')
+@app.route('/districts/<number>')
+def districts(number=None):
+    districts = District.select()
+    if number is not None:
+        districts = districts.where(District.number == int(number))
+
+    total_precincts = Precinct.select(Precinct.id).where(Precinct.status == 'A').count()
+    return render_template('results/districts.html',
+                           endpoint='districts',
+                           total_precincts=total_precincts,
+                           districts=districts)
 
 
 @app.route('/news')

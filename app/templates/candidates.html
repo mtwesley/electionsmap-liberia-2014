@@ -2,28 +2,15 @@
 {% block title %}Candidates - {% endblock %}
 {% block content %}
     <div id="content">
-        <div class="chart_01 rounded text_e blue">
-            &nbsp;&nbsp;
-            {% for l in letters %}
-            <a href="#{{ l }}">{{ l.upper() }}</a>&nbsp;&nbsp;
+        {% set candidates = election.candidates() %}
+        {% if candidates.count() %}
+            {% for c in candidates %}
+            <div class="candidates_02 rounded text_d gray">
+                <a href="{{ url_for('candidates', code=c.code.lower()) }}">
+                    {{ c.name }}
+                </a>
+            </div>
             {% endfor %}
-        </div>
-
-        {% for l in letters %}
-            {% set candidates = election.candidates_by_letter(l) %}
-            {% if candidates.count() %}
-                <div class="candidates_01 text_d gray">
-                    <a id="{{ l }}" name="{{ l }}">{{ l.upper() }}</a>
-                </div>
-                {% for c in candidates %}
-                <div class="candidates_02 rounded text_d gray">
-                    <a href="{{ url_for('candidates', code=c.code.lower()) }}">
-                        {{ c.name }}
-                    </a>
-                </div>
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
-
+        {% endif %}
     </div>
 {% endblock %}

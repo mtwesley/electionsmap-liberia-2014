@@ -154,10 +154,10 @@ create table counties (
   long_code d_long_county_code unique not null,
   short_code d_short_county_code unique not null,
   capital d_text_short not null,
-  flag_id d_id,
-  photo_id d_id,
   longitude d_longitude,
   latitude d_latitude,
+  flag_id d_id,
+  photo_id d_id,
   timestamp d_timestamp default current_timestamp not null,
 
   constraint counties_pkey primary key (id),
@@ -166,16 +166,34 @@ create table counties (
   constraint counties_fkey_photo_id foreign key (photo_id) references media (id)
 );
 
+create table districts (
+  id serial not null,
+  number d_int not null,
+  longitude d_longitude,
+  latitude d_latitude,
+  county_id d_id not null,
+  photo_id d_id,
+  timestamp d_timestamp default current_timestamp not null,
+
+  constraint districts_pkey primary key (id),
+
+  constraint districts_fkey_county_id foreign key (county_id) references counties (id),
+  constraint districts_fkey_photo_id foreign key (photo_id) references media (id),
+
+  constraint districts_coordinates_check check (not ((longitude is not null and latitude is null) or (latitude is not null and longitude is null)))
+);
+
 create table precincts (
   id serial not null,
   code d_precinct_code unique not null,
   name d_text_medium not null,
-  district d_text_short,
+  voters d_int,
   location d_text_medium,
   contact_name d_text_short,
   contact_phone d_phone,
   longitude d_longitude,
   latitude d_latitude,
+  district_id d_id,
   county_id d_id not null,
   photo_id d_id,
   status d_status default 'A' not null, -- 'P' = pending, 'A' = active, 'R' = inactive
@@ -184,8 +202,8 @@ create table precincts (
   constraint precincts_pkey primary key (id),
 
   constraint precincts_fkey_county_id foreign key (county_id) references counties (id),
+  constraint precincts_fkey_photo_id foreign key (photo_id) references media (id),
 
-  constraint precincts_contact_check check (not ((contact_name is not null and contact_phone is null) or (contact_phone is not null and contact_name is null))),
   constraint precincts_coordinates_check check (not ((longitude is not null and latitude is null) or (latitude is not null and longitude is null)))
 );
 
@@ -390,6 +408,17 @@ $$
     elsif char_length(x_code) = 4 then 
       select id from counties where long_code = x_code limit 1 into x_id;
     end if;
+    return x_id;
+  end
+$$ language plpgsql;
+
+
+create function lookup_district_id(x_county_code d_text_short, x_number d_int)
+  returns d_id as
+$$
+  declare x_id d_id;
+  begin
+    select id from districts where county_id = lookup_county_id(x_county_code) and number = x_number limit 1 into x_id;
     return x_id;
   end
 $$ language plpgsql;

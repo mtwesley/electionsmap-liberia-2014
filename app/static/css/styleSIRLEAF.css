@@ -1,0 +1,119 @@
+/* general elements */
+body {
+	font: .8em "arial", sans-serif;
+	background: url('../images/bg.jpg') repeat-x 0 0 #00247B;
+	color: #464646;
+}
+
+.candidates_02 {
+    width: 900px;
+}
+
+
+/* type styles*/
+
+.text_c {
+	font: 14px "arial", serif;
+	font-weight: bold;
+	line-height: 22px;
+	}
+.text_c a:link,
+.text_c a:visited { 
+	text-decoration: none;
+	}
+.text_c a:hover,
+.text_c a:active {
+	text-decoration: none;
+	}
+
+/* structural */
+
+#logo {
+    position: relative;
+    top: -5px;
+}
+
+#nav{
+	float:left;
+	width: 940px;
+	height:45px;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	background: #000A6B;
+	border-bottom: 1px solid #BAB5B5;
+}
+
+.nav_ITEM{
+	float:left;
+	height:34px;
+	margin:0px 0px 0px 0px;
+	padding:12px 36px 0px;
+	border-right: 1px solid #D0CDCD;
+    color: #fff;
+}
+.nav_ITEM2 {
+    color: #fff;
+}
+.nav_ITEM:hover,
+.nav_ITEM:active {
+	text-decoration: none;
+	background: #666699;
+	}
+
+.nav_ITEM2:hover,
+.nav_ITEM2:active {
+	text-decoration: none;
+	background: #666699;
+	}
+
+#overview_map{
+	float:left;
+	width:476px;
+	height:476px;
+	margin:0px;
+	padding:0px;
+	border: 1px solid #BAB5B5;
+}
+
+#overview_data{
+	float:left;
+	width:430px;
+	height:476px;
+	margin:0px 0px 0px 10px;
+	padding:0px;
+	border: 1px solid #E2E0DF;
+}
+
+.overview_data_ITEM{
+	float:left;
+	width:430px;
+	height:27px;
+	margin: 0px;
+	padding:0px;
+	border-bottom:1px solid #E2E0DF;
+}
+
+.overview_data_ITEM_district{
+	float:left;
+	width:74px;
+	line-height:27px;
+	text-align:right;
+	font-weight:bold;
+}
+
+.overview_data_ITEM_county{
+    width: 50px;
+}
+
+#footerMAIN{
+	clear:both;
+	width:100%;
+	margin:0px auto 0;
+	background: #000A6B;
+}
+
+#footer03 {
+    float: right;
+    margin: 0;
+    padding: 0;
+}

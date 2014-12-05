@@ -1,12 +1,17 @@
 <div id="nav" class="gradient_gray">
+    <a href="#">
+        <div class="nav_ITEM text_c blue">
+            HOME
+        </div>
+    </a>
     <a href="{{ url_for('overview') }}">
         <div class="nav_ITEM text_c blue {% if endpoint == 'overview' %}nav_ITEM_current{% endif %}">
             OVERVIEW
         </div>
     </a>
-    <a href="{{ url_for('counties') }}">
-        <div class="nav_ITEM text_c blue {% if endpoint == 'counties' %}nav_ITEM_current{% endif %}">
-            COUNTIES
+    <a href="{{ url_for('districts') }}">
+        <div class="nav_ITEM text_c blue {% if endpoint == 'districts' %}nav_ITEM_current{% endif %}">
+            DISTRICTS
         </div>
     </a>
     <a href="{{ url_for('candidates') }}">
@@ -14,19 +19,14 @@
             CANDIDATES
         </div>
     </a>
-    <a href="{{ url_for('data') }}">
-        <div class="nav_ITEM text_c blue {% if endpoint == 'data' %}nav_ITEM_current{% endif %}">
-            DOWNLOAD DATA
-        </div>
-    </a>
     <a href="{{ url_for('news') }}">
         <div class="nav_ITEM text_c blue {% if endpoint == 'news' %}nav_ITEM_current{% endif %}">
             NEWS FEED
         </div>
     </a>
-    <a href="{{ url_for('about') }}">
-        <div class="nav_ITEM2 text_c blue {% if endpoint == 'about' %}nav_ITEM_current{% endif %}">
-            ABOUT
+    <a href="{{ url_for('data') }}">
+        <div class="nav_ITEM2 text_c blue {% if endpoint == 'data' %}nav_ITEM_current{% endif %}">
+            DOWNLOAD DATA
         </div>
     </a>
 </div>

@@ -133,6 +133,20 @@ class County(BaseModel):
     timestamp = DateTimeField()
 
 
+class District(BaseModel):
+    class Meta:
+        db_table = 'districts'
+        order_by = ('number',)
+
+    id = PrimaryKeyField()
+    number = IntegerField()
+    longitude = DecimalField(max_digits=9, decimal_places=6)
+    latitude = DecimalField(max_digits=8, decimal_places=6)
+    county = ForeignKeyField(County, related_name='districts', db_column='county_id')
+    photo = ForeignKeyField(Media, null=True, related_name='district_photo_districts', db_column='photo_id')
+    timestamp = DateTimeField()
+
+
 class Precinct(BaseModel):
     class Meta:
         db_table = 'precincts'
@@ -141,13 +155,13 @@ class Precinct(BaseModel):
     id = PrimaryKeyField()
     code = CharField(unique=True, max_length=4)
     name = TextField()
-    district = TextField(null=True)
     location = TextField(null=True)
     contact_name = TextField(null=True)
     contact_phone = CharField(null=True)
     longitude = DecimalField(null=True, max_digits=9, decimal_places=6)
     latitude = DecimalField(null=True, max_digits=8, decimal_places=6)
-    county = ForeignKeyField(County, related_name='precincts', db_column='county_id')
+    district = ForeignKeyField(County, related_name='district_precincts', db_column='district_id')
+    county = ForeignKeyField(County, related_name='county_precincts', db_column='county_id')
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
     status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
@@ -178,6 +192,13 @@ class Election(BaseModel):
         else:
             return votes[1]
 
+    def votes_by_district(self, district):
+        votes = db.execute_sql(Result.VOTES_BY_DISTRICT_SQL % (str(self.id), str(district.id))).fetchone()
+        if votes is None:
+            return 0
+        else:
+            return votes[1]
+
     def votes_by_county(self, county):
         votes = db.execute_sql(Result.VOTES_BY_COUNTY_SQL % (str(self.id), str(county.id))).fetchone()
         if votes is None:
@@ -196,6 +217,22 @@ class Election(BaseModel):
         results = []
         sql = Result.RESULTS_BY_PRECINCT_SQL % (str(self.id), str(precinct.id))
         for (candidate_id, precinct_id, timestamp, votes) in db.execute_sql(sql):
+            result = {
+                'candidate': Candidate.get(Candidate.id == candidate_id),
+                'timestamp': timestamp,
+                'votes': votes
+            }
+            if (candidate is not None) and (candidate_id == candidate.id):
+                return result
+            results.append(result)
+        if candidate is None:
+            return results
+        return None
+
+    def results_by_district(self, district, candidate=None):
+        results = []
+        sql = Result.RESULTS_BY_DISTRICT_SQL % (str(self.id), str(district.id))
+        for (candidate_id, district_id, timestamp, votes) in db.execute_sql(sql):
             result = {
                 'candidate': Candidate.get(Candidate.id == candidate_id),
                 'timestamp': timestamp,
@@ -240,11 +277,34 @@ class Election(BaseModel):
             return results
         return None
 
+    def candidates(self):
+        return (Candidate.select().distinct()
+                .join(ElectionCandidate)
+                .where((ElectionCandidate.election == self.id) & (Candidate.status == 'A')))
+
     def candidates_by_letter(self, letter):
         return (Candidate.select().distinct()
                 .join(ElectionCandidate)
                 .where(ElectionCandidate.election == self.id)
                 .where((Candidate.name ** ("%s%%" % letter)) & (Candidate.status == 'A')))
+
+    def status_by_district(self, district):
+        precincts = Precinct.select().where((Precinct.status == 'A') & (Precinct.district == district))
+        total = precincts.count()
+        completed = (precincts.distinct()
+                     .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
+                     .where((ElectionReporter.election == self.id) & (ElectionReporter.is_completed == True)).count())
+        reporting = (precincts.distinct()
+                     .join(Result, on=(Precinct.id == Result.precinct))
+                     .join(ElectionReporter, join_type=JOIN_LEFT_OUTER, on=(Precinct.id == ElectionReporter.precinct))
+                     .where(ElectionReporter.election == self.id)
+                     .where((ElectionReporter.is_completed == False) | (ElectionReporter.is_completed == None)).count())
+        return {
+            'total': total,
+            'reporting': reporting,
+            'completed': completed,
+            'percentage': int(completed / total) if total else 0
+        }
 
     def status_by_county(self, county):
         precincts = Precinct.select().where((Precinct.status == 'A') & (Precinct.county == county))
@@ -354,6 +414,30 @@ ORDER BY
     votes DESC
 """
 
+    VOTES_BY_DISTRICT_SQL = """
+SELECT
+    district_id,
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        district_id,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    JOIN precincts ON precinct_id = precincts.id
+    WHERE election_id IN (%s) AND district_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    district_id
+ORDER BY
+    votes DESC
+"""
+
     VOTES_BY_COUNTY_SQL = """
 SELECT
     county_id,
@@ -407,6 +491,35 @@ ORDER BY
     results.precinct_id,
     results.candidate_id,
     results.timestamp DESC
+"""
+
+    RESULTS_BY_DISTRICT_SQL = """
+SELECT
+    candidate_id,
+    district_id,
+    FIRST(timestamp),
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        district_id,
+        results.timestamp,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    JOIN precincts ON precinct_id = precincts.id
+    WHERE election_id IN (%s) AND district_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    candidate_id,
+    district_id
+ORDER BY
+    district_id,
+    votes DESC
 """
 
     RESULTS_BY_COUNTY_SQL = """
