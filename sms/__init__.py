@@ -6,9 +6,9 @@ from datetime import datetime
 
 from phonenumbers import parse as parse_number, is_possible_number, is_valid_number, format_number, PhoneNumberFormat
 
-from app.auth import *
 from app.models import *
 from sms.forms import *
+from sms.auth import requires_auth
 
 
 app = Flask(__name__, static_url_path='')
@@ -32,6 +32,7 @@ def test():
 
 
 @app.route('/nexmo')
+@requires_auth
 def nexmo():
     from_phone = request.args.get('msisdn', None)
     if from_phone is not None:
@@ -48,6 +49,7 @@ def nexmo():
 
 
 @app.route('/sms')
+@requires_auth
 def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
     import re
 

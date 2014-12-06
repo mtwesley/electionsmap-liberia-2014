@@ -1,5 +1,5 @@
 {% extends "layout/web.html" %}
-{% block title %}{{ candidate.name }} - {% endblock %}
+{% block title %}Candidates - {% endblock %}
 {% block content %}
     <div id="content">
         <img src="{{ url_for('static', filename=(candidate.photo.path or '/images/candidate_full_00.jpg')) }}" class="chart_02_box rounded" />

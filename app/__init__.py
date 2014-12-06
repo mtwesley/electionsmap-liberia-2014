@@ -14,11 +14,13 @@ db.connect()
 election = Election.get((Election.type == Election.SENATORIAL) & (Election.year == 2014))
 
 @app.context_processor
+@requires_auth
 def election_preprocess():
     news = News.select().where(News.election == election.id).limit(10)
     return dict(election=election, news=news)
 
 @app.route('/')
+@requires_auth
 def overview():
     counties = County.select()
     districts = District.select()
@@ -30,6 +32,7 @@ def overview():
 
 @app.route('/counties')
 @app.route('/counties/<code>')
+@requires_auth
 def counties(code=None):
     counties = County.select()
     if code is not None:
@@ -44,6 +47,7 @@ def counties(code=None):
 
 @app.route('/districts')
 @app.route('/districts/<number>')
+@requires_auth
 def districts(number=None):
     districts = District.select()
     if number is not None:
@@ -57,6 +61,7 @@ def districts(number=None):
 
 
 @app.route('/news')
+@requires_auth
 def news():
     return render_template('news.html',
                            endpoint='news',
@@ -64,12 +69,14 @@ def news():
 
 
 @app.route('/about')
+@requires_auth
 def about():
     return render_template('about.html', endpoint='about')
 
 
 @app.route('/candidates')
 @app.route('/candidates/<code>')
+@requires_auth
 def candidates(code=None):
     import string
     letters = string.ascii_lowercase
@@ -94,18 +101,8 @@ def candidates(code=None):
 
 
 @app.route('/data')
+@requires_auth
 def data():
     return render_template('results/data.html', endpoint='data')
 
-
-@app.route('/admin/elections')
-@requires_auth
-def admin_elections():
-    return render_template('admin/elections.html', elections=Election.select())
-
-
-@app.route('/admin/candidates')
-@requires_auth
-def admin_candidates():
-    return render_template('admin/candidates.html', candidates=Candidate.select())
 
