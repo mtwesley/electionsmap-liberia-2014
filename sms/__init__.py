@@ -16,23 +16,21 @@ app.config.from_object(settings)
 
 db.connect()
 
-@app.route('/test', methods=['GET', 'POST'])
-@requires_auth
-def test():
-    form = TestForm()
-    response = None
-    if form.validate_on_submit():
-        from_phone = form.from_phone.data
-        to_phone = form.to_phone.data
-        text = form.text.data
-
-        response = sms(from_phone, to_phone, text)
-
-    return render_template('test.html', form=form, response=response)
+# @app.route('/test', methods=['GET', 'POST'])
+# def test():
+#     form = TestForm()
+#     response = None
+#     if form.validate_on_submit():
+#         from_phone = form.from_phone.data
+#         to_phone = form.to_phone.data
+#         text = form.text.data
+#
+#         response = sms(from_phone, to_phone, text)
+#
+#     return render_template('test.html', form=form, response=response)
 
 
 @app.route('/nexmo')
-@requires_auth
 def nexmo():
     from_phone = request.args.get('msisdn', None)
     if from_phone is not None:
@@ -49,7 +47,6 @@ def nexmo():
 
 
 @app.route('/sms')
-@requires_auth
 def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
     import re
 
