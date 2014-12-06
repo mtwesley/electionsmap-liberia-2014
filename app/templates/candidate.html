@@ -2,7 +2,7 @@
 {% block title %}Candidates - {% endblock %}
 {% block content %}
     <div id="content">
-        <img src="{{ url_for('static', filename=(candidate.photo.path or '/images/candidate_full_00.jpg')) }}" class="chart_02_box rounded" />
+        <img src="{{ url_for('static', filename=(candidate.photo.path or ('images/candidates/' + candidate.code|string + '.jpg') or '/images/candidate_full_00.jpg')) }}" class="chart_02_box rounded" />
         <div class="chart_02 rounded">
             <div class="chart_02_title_01 text_d">
                 {{ candidate.name }}

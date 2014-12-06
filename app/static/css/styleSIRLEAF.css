@@ -28,9 +28,13 @@ body {
 
 /* structural */
 
+#header {
+    padding-top: 8px;
+}
+
 #logo {
     position: relative;
-    top: -5px;
+    top: -12px;
 }
 
 #nav{
