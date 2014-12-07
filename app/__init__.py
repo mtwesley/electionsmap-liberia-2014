@@ -1,6 +1,6 @@
 import settings
 
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, make_response
 
 from app.auth import *
 from app.models import *
@@ -100,9 +100,59 @@ def candidates(code=None):
                            letters=letters)
 
 
-@app.route('/data')
+@app.route('/data', methods=['GET', 'POST'])
 @requires_auth
 def data():
+    sql = None
+    data = request.form.get('data', None)
+    if data is not None:
+        import csv
+        import datetime
+        import StringIO
+
+        output = StringIO.StringIO()
+        writer = csv.writer(output)
+        try:
+            if data == 'results_total':
+                sql = Result.RESULTS_TOTAL_SQL % election.id
+                writer.writerow(['Candidate', 'Votes'])
+                for (candidate_id, timestamp, votes) in db.execute_sql(sql):
+                    candidate = Candidate.get(Candidate.id == candidate_id)
+                    writer.writerow([candidate.name, votes])
+
+            elif data == 'results_by_county':
+                sql = Result.RESULTS_BY_COUNTY_ALL_SQL % election.id
+                writer.writerow(['Candidate', 'County', 'Votes'])
+                for (candidate_id, county_id, timestamp, votes) in db.execute_sql(sql):
+                    candidate = Candidate.get(Candidate.id == candidate_id)
+                    county = County.get(County.id == county_id)
+                    writer.writerow([candidate.name, county.name + ' County', votes])
+
+            elif data == 'results_by_district':
+                sql = Result.RESULTS_BY_DISTRICT_ALL_SQL % election.id
+                writer.writerow(['Candidate', 'County', 'District', 'Votes'])
+                for (candidate_id, district_id, timestamp, votes) in db.execute_sql(sql):
+                    candidate = Candidate.get(Candidate.id == candidate_id)
+                    district = District.get(District.id == district_id)
+                    writer.writerow([candidate.name, district.county.name + ' County', 'District ' + str(district.number), votes])
+
+            elif data == 'results_by_precinct':
+                sql = Result.RESULTS_BY_PRECINCT_ALL_SQL % election.id
+                writer.writerow(['Candidate', 'County', 'District', 'Precinct', 'Votes'])
+                for (candidate_id, precinct_id, timestamp, votes) in db.execute_sql(sql):
+                    candidate = Candidate.get(Candidate.id == candidate_id)
+                    precinct = Precinct.get(Precinct.id == precinct_id)
+                    writer.writerow([candidate.name, precinct.county.name + ' County', 'District ' + str(precinct.district.number), precinct.name, votes])
+        except:
+            response = 'Unable to generate CSV. Please contact system administrator.'
+        else:
+            response = make_response(output.getvalue())
+
+        response.headers["Content-Disposition"] = "attachment; filename=%s.csv" % (data + datetime.datetime.now().strftime('_%Y%m%d_%H%M%S'))
+        response.headers["Content-type"] = "text/csv"
+        return response
+
+
     return render_template('results/data.html', endpoint='data')
 
 

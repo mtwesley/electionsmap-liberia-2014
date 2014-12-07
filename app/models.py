@@ -143,7 +143,7 @@ class District(BaseModel):
     longitude = DecimalField(max_digits=9, decimal_places=6)
     latitude = DecimalField(max_digits=8, decimal_places=6)
     county = ForeignKeyField(County, related_name='districts', db_column='county_id')
-    photo = ForeignKeyField(Media, null=True, related_name='district_photo_districts', db_column='photo_id')
+    photo = ForeignKeyField(Media, null=True, db_column='photo_id')
     timestamp = DateTimeField()
 
 
@@ -160,8 +160,8 @@ class Precinct(BaseModel):
     contact_phone = CharField(null=True)
     longitude = DecimalField(null=True, max_digits=9, decimal_places=6)
     latitude = DecimalField(null=True, max_digits=8, decimal_places=6)
-    district = ForeignKeyField(County, related_name='district_precincts', db_column='district_id')
-    county = ForeignKeyField(County, related_name='county_precincts', db_column='county_id')
+    district = ForeignKeyField(District, related_name='precincts', db_column='district_id')
+    county = ForeignKeyField(County, related_name='precincts', db_column='county_id')
     photo = ForeignKeyField(Media, null=True, db_column='photo_id')
     status = CharField(max_length=1, default='A')
     timestamp = DateTimeField()
@@ -483,10 +483,24 @@ FROM (
 SELECT DISTINCT ON (precinct_id, candidate_id)
     results.candidate_id AS candidate_id,
     results.precinct_id AS precinct_id,
-    results.timestamp AS timestamp
+    results.timestamp AS timestamp,
     COALESCE(results.votes, 0) AS votes
 FROM results
 WHERE results.election_id IN (%s) AND results.precinct_id IN (%s)
+ORDER BY
+    results.precinct_id,
+    results.candidate_id,
+    results.timestamp DESC
+"""
+
+    RESULTS_BY_PRECINCT_ALL_SQL = """
+SELECT DISTINCT ON (precinct_id, candidate_id)
+    results.candidate_id AS candidate_id,
+    results.precinct_id AS precinct_id,
+    results.timestamp AS timestamp,
+    COALESCE(results.votes, 0) AS votes
+FROM results
+WHERE results.election_id IN (%s)
 ORDER BY
     results.precinct_id,
     results.candidate_id,
@@ -522,6 +536,35 @@ ORDER BY
     votes DESC
 """
 
+    RESULTS_BY_DISTRICT_ALL_SQL = """
+SELECT
+    candidate_id,
+    district_id,
+    FIRST(timestamp),
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        district_id,
+        results.timestamp,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    JOIN precincts ON precinct_id = precincts.id
+    WHERE election_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    candidate_id,
+    district_id
+ORDER BY
+    district_id,
+    votes DESC
+"""
+
     RESULTS_BY_COUNTY_SQL = """
 SELECT
     candidate_id,
@@ -538,6 +581,35 @@ FROM (
     FROM results
     JOIN precincts ON precinct_id = precincts.id
     WHERE election_id IN (%s) AND county_id IN (%s)
+    ORDER BY
+        precinct_id,
+        candidate_id,
+        results.timestamp DESC
+) as precinct_results
+GROUP BY
+    candidate_id,
+    county_id
+ORDER BY
+    county_id,
+    votes DESC
+"""
+
+    RESULTS_BY_COUNTY_ALL_SQL = """
+SELECT
+    candidate_id,
+    county_id,
+    FIRST(timestamp),
+    COALESCE(SUM(votes), 0) AS votes
+FROM (
+    SELECT DISTINCT ON (precinct_id, candidate_id)
+        candidate_id,
+        precinct_id,
+        county_id,
+        results.timestamp,
+        COALESCE(votes, 0) AS votes
+    FROM results
+    JOIN precincts ON precinct_id = precincts.id
+    WHERE election_id IN (%s)
     ORDER BY
         precinct_id,
         candidate_id,

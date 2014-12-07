@@ -16,18 +16,19 @@ app.config.from_object(settings)
 
 db.connect()
 
-# @app.route('/test', methods=['GET', 'POST'])
-# def test():
-#     form = TestForm()
-#     response = None
-#     if form.validate_on_submit():
-#         from_phone = form.from_phone.data
-#         to_phone = form.to_phone.data
-#         text = form.text.data
-#
-#         response = sms(from_phone, to_phone, text)
-#
-#     return render_template('test.html', form=form, response=response)
+@app.route('/test', methods=['GET', 'POST'])
+@requires_auth
+def test():
+    form = TestForm()
+    response = None
+    if form.validate_on_submit():
+        from_phone = form.from_phone.data
+        to_phone = form.to_phone.data
+        text = form.text.data
+
+        response = sms(from_phone, to_phone, text)
+
+    return render_template('test.html', form=form, response=response)
 
 
 @app.route('/nexmo')
@@ -54,7 +55,7 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
     news_syntax = re.compile('^(NEWS|NEW)\s+(.+)', re.IGNORECASE)
     completed_syntax = re.compile('^((RESULTS|RESULT)\s+)?([0-9]{4,6})\s+(DONE|COMPLETE|FINISH(ED)?)', re.IGNORECASE)
     results_syntax = re.compile('^((RESULTS|RESULT)\s+)?([0-9]{4,6})\s+(([A-Z]{2,7})\s+([0-9]+))+', re.IGNORECASE)
-    candidates_votes_syntax = re.compile('([A-Z]{2,7})\s+([0-9]+)', re.IGNORECASE)
+    candidates_votes_syntax = re.compile('(?:(?:(?:RESULTS|RESULT)\s+)?(?:[0-9]{4,6}\s+))?([A-Z]{2,7})\s+([0-9]+)', re.IGNORECASE)
 
     response = {
         'success': [],
@@ -144,12 +145,11 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
             message.status = Message.ACCEPTED
             message.save(force_insert=True)
             try:
-                pct = results_matches.group(3)
-                (ElectionReporter.update(is_completed=True)
-                 .join(Precinct, on=(ElectionReporter.precinct == Precinct.id))
-                 .where(
+                pct = completed_matches.group(3)
+                precinct = Precinct.get(Precinct.code == pct.upper())
+                (ElectionReporter.update(is_completed=True).where(
                     (ElectionReporter.election == election) &
-                    (Precinct.code == pct.upper()) &
+                    (ElectionReporter.precinct == precinct) &
                     (ElectionReporter.reporter == reporter))).execute()
             except Exception:
                 return 'Message accepted with errors. Unable to mark precinct results as completed.'
