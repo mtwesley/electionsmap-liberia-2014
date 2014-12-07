@@ -1,7 +1,11 @@
 /* general elements */
+html {
+    background-color: #020a6b;
+}
+
 body {
 	font: .8em "arial", sans-serif;
-	background: url('../images/bg.jpg') repeat-x 0 0 #00247B;
+	background: url('../images/bg.jpg') repeat-x 0 0 #020a6b;
 	color: #464646;
 }
 
