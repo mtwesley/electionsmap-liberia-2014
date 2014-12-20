@@ -53,9 +53,9 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
 
     # Possible syntax
     news_syntax = re.compile('^(NEWS|NEW)\s+(.+)', re.IGNORECASE)
-    completed_syntax = re.compile('^((RESULTS|RESULT)\s+)?([0-9]{4,6})\s+(DONE|COMPLETE|FINISH(ED)?)', re.IGNORECASE)
-    results_syntax = re.compile('^((RESULTS|RESULT)\s+)?([0-9]{4,6})\s+(([A-Z]{2,7})\s+([0-9]+))+', re.IGNORECASE)
-    candidates_votes_syntax = re.compile('(?:(?:(?:RESULTS|RESULT)\s+)?(?:[0-9]{4,6}\s+))?([A-Z]{2,7})\s+([0-9]+)', re.IGNORECASE)
+    completed_syntax = re.compile('((RESULTS|RESULT)\W+)?([0-9]{4,6})\W+(DONE|COMPLETE|FINISH(ED)?)', re.IGNORECASE)
+    results_syntax = re.compile('((RESULTS|RESULT)\W+)?([0-9]{4,6})\W*(([A-Z]{2,7})\W*([0-9]+))+', re.IGNORECASE)
+    candidates_votes_syntax = re.compile('(?:(?:(?:RESULTS|RESULT)\W+)?(?:[0-9]{4,6}\W*))?([A-Z]{2,7})\W*([0-9]+)', re.IGNORECASE)
 
     response = {
         'success': [],
@@ -170,10 +170,11 @@ def sms(from_phone=None, to_phone=None, text=None, timestamp=None):
             try:
                 pct = results_matches.group(3)
                 precinct = (Precinct.select().distinct()
-                            .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
+#                            .join(ElectionReporter, on=(Precinct.id == ElectionReporter.precinct))
                             .where((Precinct.code == pct.upper()) & (Precinct.status == 'A'))
-                            .where(ElectionReporter.election == election.id)
-                            .where(ElectionReporter.reporter == reporter.id).get())
+#                            .where(ElectionReporter.election == election.id)
+#                            .where(ElectionReporter.reporter == reporter.id)
+                            .get())
             except Precinct.DoesNotExist:
                 message.response = 'Message accepted with errors. Precinct (%s) unauthorized or non-existent.' % pct.upper()
                 message.save()
