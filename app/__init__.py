@@ -147,7 +147,7 @@ def data():
                     writer.writerow([candidate.name, precinct.county.name + ' County', 'District ' + str(precinct.district.number), precinct.name, votes])
 
             elif data == 'messages':
-                writer.writerow(['Timestamp', 'From', 'Text', 'Response', 'Type', 'Status'])
+                writer.writerow(['Timestamp', 'Name', 'Phone', 'Text', 'Response', 'Type', 'Status'])
                 for message in Message.select():
                     if message.type == Message.NEWS:
                         message_type = 'News'
@@ -163,9 +163,15 @@ def data():
                     else:
                         message_status = 'Pending'
 
+                    if message.reporter:
+                        message_sender = message.reporter.name
+                    else:
+                        message_sender = 'Unknown'
+
                     writer.writerow([
                         message.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
-                        message.reporter or message.from_phone,
+                        message_sender,
+                        message.from_phone,
                         message.text,
                         message.response,
                         message_type,
