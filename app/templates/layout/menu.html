@@ -9,6 +9,11 @@
             OVERVIEW
         </div>
     </a>
+    <a href="{{ url_for('counties') }}">
+        <div class="nav_ITEM text_c blue {% if endpoint == 'counties' %}nav_ITEM_current{% endif %}">
+            COUNTIES
+        </div>
+    </a>
     <a href="{{ url_for('districts') }}">
         <div class="nav_ITEM text_c blue {% if endpoint == 'districts' %}nav_ITEM_current{% endif %}">
             DISTRICTS

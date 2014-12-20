@@ -9,6 +9,15 @@ body {
 	color: #464646;
 }
 
+.stylelink, .stylelink:visited {
+    color: #333;
+    text-decoration: underline !important;
+}
+
+.stylelink:hover {
+    text-decoration: none !important;
+}
+
 .candidates_02 {
     width: 900px;
 }
@@ -55,12 +64,13 @@ body {
 	float:left;
 	height:34px;
 	margin:0px 0px 0px 0px;
-	padding:12px 36px 0px;
+	padding:12px 26px 0px;
 	border-right: 1px solid #D0CDCD;
     color: #fff;
 }
 .nav_ITEM2 {
     color: #fff;
+	padding:12px 26px 0px;
 }
 .nav_ITEM:hover,
 .nav_ITEM:active {

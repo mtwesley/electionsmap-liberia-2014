@@ -22,10 +22,12 @@ def election_preprocess():
 @app.route('/')
 @requires_auth
 def overview():
+    county = County.select().where(County.long_code == 'MONT')
     counties = County.select()
     districts = District.select()
     return render_template('results/overview.html',
                            endpoint='overview',
+                           county=county,
                            counties=counties,
                            districts=districts)
 

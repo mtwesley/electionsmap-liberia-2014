@@ -2,6 +2,18 @@
 {% block title %}Overview - {% endblock %}
 {% block content %}
     <div id="content">
+        {% set county_result = election.results_by_county(county.first())[0] %}
+        {% if county_result %}
+            <div class="chart_01 rounded text_a" style="font-size: 14px !important; padding: 8px 0;">
+                <strong>{{ county_result.candidate.name }}</strong>
+                <strong style="color: {% if result and county_result.candidate.party(election).color %}
+                    {{ '#' + county_result.candidate.party(election).color }} {% else %} #555555 {% endif %};">
+                    ({{ county_result.candidate.party(election).name }})
+                </strong>
+                leads with a total of <strong>{{ county_result.votes }}</strong> votes.
+                <a class="stylelink" href="{{ url_for('counties', code=county.first().long_code|lower) }}">View more {{ county.first().name }} County results</a>.
+            </div>
+        {% endif %}
         <div id="overview_map" class="rounded">{% include 'svg/counties/MONT.svg' %}</div>
         <div id="overview_data" class="rounded">
             {% for d in districts %}
