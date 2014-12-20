@@ -8,10 +8,10 @@
                 <strong>{{ county_result.candidate.name }}</strong>
                 <strong style="color: {% if result and county_result.candidate.party(election).color %}
                     {{ '#' + county_result.candidate.party(election).color }} {% else %} #555555 {% endif %};">
-                    ({{ county_result.candidate.party(election).name }})
+                    ({{ county_result.candidate.party(election).code }})
                 </strong>
                 leads with a total of <strong>{{ county_result.votes }}</strong> votes.
-                <a class="stylelink" href="{{ url_for('counties', code=county.first().long_code|lower) }}">View more {{ county.first().name }} County results</a>.
+                <a class="stylelink" href="{{ url_for('counties', code=county.first().long_code|lower) }}">View more results</a>.
             </div>
         {% endif %}
         <div id="overview_map" class="rounded">{% include 'svg/counties/MONT.svg' %}</div>

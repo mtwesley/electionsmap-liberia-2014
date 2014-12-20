@@ -370,13 +370,14 @@ class Message(BaseModel):
         order_by = ('-timestamp',)
 
     id = PrimaryKeyField()
-    channel = ForeignKeyField(Channel, related_name='messages', db_column='channel_id')
-    election = ForeignKeyField(Election, related_name='messages', db_column='election_id')
-    reporter = ForeignKeyField(Reporter, related_name='messages', db_column='reporter_id')
+    channel = ForeignKeyField(Channel, related_name='messages', db_column='channel_id', null=True)
+    election = ForeignKeyField(Election, related_name='messages', db_column='election_id', null=True)
+    reporter = ForeignKeyField(Reporter, related_name='messages', db_column='reporter_id', null=True)
     type = CharField(max_length=1, default='U')
     from_phone = CharField(max_length=10, null=True)
     to_phone = CharField(max_length=10, null=True)
-    text = TextField()
+    text = TextField(null=True)
+    response = TextField(null=True)
     status = CharField(max_length=1, default='P')
     timestamp = DateTimeField()
 

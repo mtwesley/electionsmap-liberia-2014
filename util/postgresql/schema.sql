@@ -262,13 +262,14 @@ create table election_reporters (
 
 create table messages (
   id serial not null,
-  channel_id d_id not null,
-  election_id d_id not null,
-  reporter_id d_id not null,
+  channel_id d_id,
+  election_id d_id,
+  reporter_id d_id,
   type d_message_type default 'U' not null, -- 'R' = results, 'N' = news, 'U' = unknown
   from_phone d_phone not null,
   to_phone d_phone not null,
-  text d_text_medium not null,
+  text d_text_medium,
+  response d_text_medium,
   status d_status default 'P' not null, -- 'P' = pending, 'A' = accepted, 'R' = rejected
   timestamp d_timestamp default current_timestamp not null,
 
