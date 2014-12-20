@@ -7,7 +7,7 @@ $(document).ready(function() {
         offset: -65,
         fadeInTime: 100,
         fadeOutTime: 100,
-        popupId: 'county-results-powertip'
+        popupId: 'district-results-powertip'
     })
 //    $('.county').data('powertiptarget', 'myToolTip');
 })

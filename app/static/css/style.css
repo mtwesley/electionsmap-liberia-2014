@@ -183,7 +183,7 @@ td {
     display: none;
 }
 
-#county-results-powertip {
+#district-results-powertip {
     padding: 5px;
     position: absolute;
     display: none;
@@ -193,7 +193,7 @@ td {
     font-size: 13px;
 }
 
-#county-results-powertip img {
+#district-results-powertip img {
     height: 45px;
     margin-right: 10px;
     float: left;

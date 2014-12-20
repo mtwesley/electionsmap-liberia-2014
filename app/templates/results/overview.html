@@ -53,7 +53,7 @@
                 </div>
                 {% if result %}
                     <div class="powertip" id="district-{{ d.number }}">
-                        <img src="{{ url_for('static', filename=(result.candidate.photo.path or 'images/news_thumb_00.jpg')) }}">
+                        <img src="{{ url_for('static', filename=(result.candidate.photo.path or ('images/candidates/' + result.candidate.code|string + '_thumb.jpg') or 'images/news_thumb_00.jpg')) }}">
                         {{ result.candidate.name }} - {{ (100 * result.votes / votes)|int }}%<br>
                         <span style="color: #{{ result.candidate.party(election).color or '555555' }}">{{ result.candidate.party(election).name }}</span>
                     </div>

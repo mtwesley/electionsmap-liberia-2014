@@ -555,6 +555,7 @@ insert into elections (type, year, from_date, to_date) values ('S', 2014, '2014-
 
 -- election channels
 
+insert into election_channels (election_id, channel_id) values (lookup_election_id('S', 2014), lookup_channel_id(('0000')));
 insert into election_channels (election_id, channel_id) values (lookup_election_id('S', 2014), lookup_channel_id('+15152038684'));
 
 
