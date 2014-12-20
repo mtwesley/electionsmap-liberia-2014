@@ -3,14 +3,16 @@
 {% block content %}
     <div id="content">
         <form method="post">
-            <strong>Results Data: </strong>
+            <strong>Data: </strong>
             &nbsp;&nbsp;
             <select name="data">
                 <option value="" selected="selected" disabled="disabled"></option>
-                <option value="results_total">National</option>
-                <option value="results_by_county">County</option>
-                <option value="results_by_district">District</option>
-                <option value="results_by_precinct">Precinct</option>
+                <option value="results_total">National Results</option>
+                <option value="results_by_county">County Results</option>
+                <option value="results_by_district">District Results</option>
+                <option value="results_by_precinct">Precinct Results</option>
+                <option value="" disabled="disabled">&#8213;</option>
+                <option value="messages">Messages</option>
             </select>
             &nbsp;&nbsp;
             <input type="submit" value="Download CSV">

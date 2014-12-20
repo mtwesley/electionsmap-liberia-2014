@@ -546,6 +546,7 @@ insert into channels (name, phone, status) values ('USA Nexmo', '+15152038684', 
 
 insert into reporters (name, phone, email) values ('Mlen-Too Wesley', '+13478789198', 'mlen.too.wesley@gmail.com');
 insert into reporters (name, phone, email) values ('Lawrence Randall', '+231886400206', 'pellrandall@gmail.com');
+insert into reporters (name, phone, email) values ('Lawrence Randall', '+231777400206');
 
 
 -- elections
@@ -563,6 +564,7 @@ insert into election_channels (election_id, channel_id) values (lookup_election_
 
 insert into election_reporters (election_id, reporter_id, precinct_id) select lookup_election_id('S', 2014), lookup_reporter_id('+13478789198'), precincts.id from precincts;
 insert into election_reporters (election_id, reporter_id, precinct_id) select lookup_election_id('S', 2014), lookup_reporter_id('+231886400206'), precincts.id from precincts;
+insert into election_reporters (election_id, reporter_id, precinct_id) select lookup_election_id('S', 2014), lookup_reporter_id('+231777400206'), precincts.id from precincts;
 
 
 -- election candidates

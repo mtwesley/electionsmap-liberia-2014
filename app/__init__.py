@@ -145,6 +145,32 @@ def data():
                     candidate = Candidate.get(Candidate.id == candidate_id)
                     precinct = Precinct.get(Precinct.id == precinct_id)
                     writer.writerow([candidate.name, precinct.county.name + ' County', 'District ' + str(precinct.district.number), precinct.name, votes])
+
+            elif data == 'messages':
+                writer.writerow(['Timestamp', 'From', 'Text', 'Response', 'Type', 'Status'])
+                for message in Message.select():
+                    if message.type == Message.NEWS:
+                        message_type = 'News'
+                    elif message.type == Message.RESULTS:
+                        message_type = 'Results'
+                    else:
+                        message_type = 'Unknown'
+
+                    if message.status == Message.ACCEPTED:
+                        message_status = 'Accepted'
+                    elif message.status == Message.REJECTED:
+                        message_status = 'Rejected'
+                    else:
+                        message_status = 'Pending'
+
+                    writer.writerow([
+                        message.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
+                        message.reporter or message.from_phone,
+                        message.text,
+                        message.response,
+                        message_type,
+                        message_status
+                    ])
         except:
             response = 'Unable to generate CSV. Please contact system administrator.'
         else:
