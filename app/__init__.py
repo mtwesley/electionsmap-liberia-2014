@@ -146,6 +146,16 @@ def data():
                     precinct = Precinct.get(Precinct.id == precinct_id)
                     writer.writerow([candidate.name, precinct.county.name + ' County', 'District ' + str(precinct.district.number), precinct.name, votes])
 
+            elif data == 'reporters_by_precinct':
+                sql = "SELECT DISTINCT reporter_id, precinct_id FROM results"
+                writer.writerow(['Name', 'Phone', 'Precinct', 'District'])
+                for (reporter_id, precinct_id) in db.execute_sql(sql):
+                    reporter = Reporter.get(Reporter.id == reporter_id)
+                    precinct = Precinct.get(Precinct.id == precinct_id)
+                    writer.writerow([reporter.name, reporter.phone,
+                                     str(precinct.code) + ' (' + precinct.name + ')',
+                                     'District ' + str(precinct.district.number)])
+
             elif data == 'messages':
                 writer.writerow(['Timestamp', 'Name', 'Phone', 'Text', 'Response', 'Type', 'Status'])
                 for message in Message.select():
